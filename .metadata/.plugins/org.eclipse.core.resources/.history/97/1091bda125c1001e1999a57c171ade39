@@ -1,0 +1,38 @@
+/*
+ * Measurement.cpp
+ *
+ *  Created on: 01-Feb-2024
+ *      Author: giris
+ */
+
+#include "Measurement.h"
+
+using namespace std;
+
+Measurement::Measurement(uint16_t timestamp) : timestamp(timestamp)
+{
+}
+
+Measurement::~Measurement()
+{
+}
+
+uint16_t Measurement::toTimestamp(int hour, int minute)
+{
+	uint16_t minSinceMidnight = (hour * 60) + minute;
+
+	return minSinceMidnight;
+
+}
+
+std::string Measurement::toTimeOfDay(uint16_t timestamp)
+{
+	ostringstream oss;
+
+	oss << setw(2) << setfill('0') << << ":" <<
+}
+
+long Measurement::getTimestamp() const
+{
+	this->timestamp;
+}

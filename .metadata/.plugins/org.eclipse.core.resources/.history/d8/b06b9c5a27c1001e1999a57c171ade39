@@ -1,0 +1,31 @@
+/*
+ * Measurement.h
+ *
+ *  Created on: 01-Feb-2024
+ *      Author: giris
+ */
+
+#ifndef MEASUREMENT_H_
+#define MEASUREMENT_H_
+
+#include <cstdint>
+#include <string>
+#include <iostream>
+#include <sstream>
+#include <iomanip>
+
+class Measurement
+{
+private:
+	uint16_t timestamp;
+public:
+	Measurement(uint16_t timestamp);
+	virtual ~Measurement();
+	static uint16_t toTimestamp(int hour, int minute);
+	static std::string toTimeOfDay(uint16_t timestamp);
+	long getTimestamp() const;
+	std::string toString() const;
+	static void parseLine(const std::string& line, uint16_t& timestamp, std::string& type, std::string& remainder);
+};
+
+#endif /* MEASUREMENT_H_ */

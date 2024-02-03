@@ -1,0 +1,17 @@
+// Standard (system) header files
+#include <iostream>
+#include <cstdlib>
+
+using namespace std;
+
+// Add your project's header files here
+#include "Temperature.h"
+
+// Main program
+int main ()
+{
+	cout << "MeasurementDb started." << endl << endl;
+
+	Temperature measurement1(6, -3);
+	return 0;
+}

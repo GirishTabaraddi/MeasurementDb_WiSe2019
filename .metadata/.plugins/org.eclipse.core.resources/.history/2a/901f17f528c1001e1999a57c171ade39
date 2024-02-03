@@ -1,0 +1,33 @@
+/*
+ * Temperature.cpp
+ *
+ *  Created on: 01-Feb-2024
+ *      Author: giris
+ */
+
+#include "Temperature.h"
+
+using namespace std;
+
+Temperature::Temperature(uint16_t timestamp, float temperature) : temperature(temperature)
+{
+	Measurement = measurement(timestamp);
+}
+
+Temperature::~Temperature()
+{
+}
+
+float Temperature::getTemperature() const
+{
+	return this->temperature;
+}
+
+std::string Temperature::toString() const
+{
+	ostringstream oss;
+
+	oss << "Temperature: " << "°C" << endl;
+
+	return oss.str();
+}

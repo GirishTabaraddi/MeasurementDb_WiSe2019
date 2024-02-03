@@ -1,0 +1,85 @@
+/*
+ * MeasurementDb.cpp
+ *
+ *  Created on: 01-Feb-2024
+ *      Author: giris
+ */
+
+#include "MeasurementDb.h"
+
+using namespace std;
+
+//MeasurementDb::MeasurementDb()
+//{
+//	// TODO Auto-generated constructor stub
+//
+//}
+//
+//MeasurementDb::~MeasurementDb()
+//{
+//	// TODO Auto-generated destructor stub
+//}
+
+void MeasurementDb::addMeasurement(const std::string &location,
+		std::shared_ptr<Measurement> measurement)
+{
+	map<std::string, vector<shared_ptr<Measurement>>>::iterator itr = this->data.find(location);
+
+	if(itr != this->data.end())
+	{
+		itr->second.push_back(measurement);
+	}
+	else
+	{
+		this->data[location].push_back(measurement);
+	}
+}
+
+void MeasurementDb::print()
+{
+	cout << "Content of Database: " << endl;
+
+	for(const auto& itr : this->data)
+	{
+		string location = itr.first;
+
+		for(const shared_ptr<Measurement> & vecItr : itr.second)
+		{
+			string measurement =  vecItr->toString();
+
+			cout << location << ": " << vecItr->toTimeOfDay(vecItr->getTimestamp()) << " " << measurement << endl;
+		}
+	}
+}
+
+void MeasurementDb::save(std::ostream &to)
+{
+	for(const auto& itr: this->data)
+	{
+		string loc = itr.first;
+		to << "[" << loc << "]" << endl;
+
+		for(const shared_ptr<Measurement> & vecItr: itr.second)
+		{
+			string measurement = vecItr->toString();
+			long int intVal = vecItr->getTimestamp();
+
+			to << intVal << ";" << measurement << endl;
+		}
+	}
+}
+
+void MeasurementDb::load(std::istream &from)
+{
+	this->data.clear();
+
+	string line;
+
+	getline(from, line);
+
+	string line1;
+
+	getline(from>>ws, line1);
+
+	cout << "here: " << line1 << endl;
+}

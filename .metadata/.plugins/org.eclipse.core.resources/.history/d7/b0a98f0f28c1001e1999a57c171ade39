@@ -1,0 +1,20 @@
+/*
+ * Temperature.cpp
+ *
+ *  Created on: 01-Feb-2024
+ *      Author: giris
+ */
+
+#include "Temperature.h"
+
+Temperature::Temperature()
+{
+	// TODO Auto-generated constructor stub
+
+}
+
+Temperature::~Temperature()
+{
+	// TODO Auto-generated destructor stub
+}
+

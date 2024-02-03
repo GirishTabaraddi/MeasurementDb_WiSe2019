@@ -1,0 +1,1381 @@
+11:59:20 **** Rebuild of configuration Debug for project MeasurementDb ****
+Info: Internal Builder is used for build
+g++ -std=c++1y -O0 -g3 -Wall -c -fmessage-length=0 -Wall -Werror=return-type -o "myCode\\main.o" "..\\myCode\\main.cpp" 
+g++ -o MeasurementDb.exe "myCode\\main.o" 
+Info: Nothing to build for MeasurementDb
+17:58:14 **** Incremental Build of configuration Debug for project MeasurementDb ****
+Info: Internal Builder is used for build
+g++ -std=c++1y -O0 -g3 -Wall -c -fmessage-length=0 -Wall -Werror=return-type -o "myCode\\Measurement.o" "..\\myCode\\Measurement.cpp" 
+g++ -o MeasurementDb.exe "myCode\\Measurement.o" "myCode\\main.o" 
+17:58:22 **** Incremental Build of configuration Debug for project MeasurementDb ****
+Info: Internal Builder is used for build
+g++ -std=c++1y -O0 -g3 -Wall -c -fmessage-length=0 -Wall -Werror=return-type -o "myCode\\Measurement.o" "..\\myCode\\Measurement.cpp" 
+In file included from ..\myCode\Measurement.cpp:8:
+..\myCode\Measurement.h:16:9: error: 'uint16_t' does not name a type
+   16 |         uint16_t timestamp;
+      |         ^~~~~~~~
+..\myCode\Measurement.h:1:1: note: 'uint16_t' is defined in header '<cstdint>'; did you forget to '#include <cstdint>'?
+  +++ |+#include <cstdint>
+    1 | /*
+17:58:29 **** Incremental Build of configuration Debug for project MeasurementDb ****
+Info: Internal Builder is used for build
+g++ -std=c++1y -O0 -g3 -Wall -c -fmessage-length=0 -Wall -Werror=return-type -o "myCode\\Measurement.o" "..\\myCode\\Measurement.cpp" 
+g++ -o MeasurementDb.exe "myCode\\Measurement.o" "myCode\\main.o" 
+18:19:17 **** Incremental Build of configuration Debug for project MeasurementDb ****
+Info: Internal Builder is used for build
+g++ -std=c++1y -O0 -g3 -Wall -c -fmessage-length=0 -Wall -Werror=return-type -o "myCode\\Measurement.o" "..\\myCode\\Measurement.cpp" 
+..\myCode\Measurement.cpp: In member function 'long int Measurement::getTimestamp() const':
+..\myCode\Measurement.cpp:50:15: warning: statement has no effect [-Wunused-value]
+   50 |         this->timestamp;
+      |         ~~~~~~^~~~~~~~~
+..\myCode\Measurement.cpp:51:1: error: no return statement in function returning non-void [-Werror=return-type]
+   51 | }
+      | ^
+cc1plus.exe: some warnings being treated as errors
+18:19:29 **** Incremental Build of configuration Debug for project MeasurementDb ****
+Info: Internal Builder is used for build
+g++ -std=c++1y -O0 -g3 -Wall -c -fmessage-length=0 -Wall -Werror=return-type -o "myCode\\Measurement.o" "..\\myCode\\Measurement.cpp" 
+g++ -o MeasurementDb.exe "myCode\\Measurement.o" "myCode\\main.o" 
+18:36:41 **** Incremental Build of configuration Debug for project MeasurementDb ****
+Info: Internal Builder is used for build
+g++ -std=c++1y -O0 -g3 -Wall -c -fmessage-length=0 -Wall -Werror=return-type -o "myCode\\Temperature.o" "..\\myCode\\Temperature.cpp" 
+..\myCode\Temperature.cpp: In constructor 'Temperature::Temperature(uint16_t, float)':
+..\myCode\Temperature.cpp:12:90: error: no matching function for call to 'Measurement::Measurement()'
+   12 | Temperature::Temperature(uint16_t timestamp, float temperature) : temperature(temperature)
+      |                                                                                          ^
+In file included from ..\myCode\Temperature.h:11,
+                 from ..\myCode\Temperature.cpp:8:
+..\myCode\Measurement.h:24:9: note: candidate: 'Measurement::Measurement(uint16_t)'
+   24 |         Measurement(uint16_t timestamp);
+      |         ^~~~~~~~~~~
+..\myCode\Measurement.h:24:9: note:   candidate expects 1 argument, 0 provided
+..\myCode\Measurement.h:19:7: note: candidate: 'constexpr Measurement::Measurement(const Measurement&)'
+   19 | class Measurement
+      |       ^~~~~~~~~~~
+..\myCode\Measurement.h:19:7: note:   candidate expects 1 argument, 0 provided
+..\myCode\Temperature.cpp:14:20: warning: unnecessary parentheses in declaration of 'timestamp' [-Wparentheses]
+   14 |         Measurement(timestamp);
+      |                    ^~~~~~~~~~~
+..\myCode\Temperature.cpp:14:20: note: remove parentheses
+   14 |         Measurement(timestamp);
+      |                    ^~~~~~~~~~~
+      |                    -         -
+..\myCode\Temperature.cpp:14:21: error: declaration of 'Measurement timestamp' shadows a parameter
+   14 |         Measurement(timestamp);
+      |                     ^~~~~~~~~
+..\myCode\Temperature.cpp:12:35: note: 'uint16_t timestamp' previously declared here
+   12 | Temperature::Temperature(uint16_t timestamp, float temperature) : temperature(temperature)
+      |                          ~~~~~~~~~^~~~~~~~~
+..\myCode\Temperature.cpp:14:30: error: no matching function for call to 'Measurement::Measurement()'
+   14 |         Measurement(timestamp);
+      |                              ^
+..\myCode\Measurement.h:24:9: note: candidate: 'Measurement::Measurement(uint16_t)'
+   24 |         Measurement(uint16_t timestamp);
+      |         ^~~~~~~~~~~
+..\myCode\Measurement.h:24:9: note:   candidate expects 1 argument, 0 provided
+..\myCode\Measurement.h:19:7: note: candidate: 'constexpr Measurement::Measurement(const Measurement&)'
+   19 | class Measurement
+      |       ^~~~~~~~~~~
+..\myCode\Measurement.h:19:7: note:   candidate expects 1 argument, 0 provided
+18:36:56 **** Incremental Build of configuration Debug for project MeasurementDb ****
+Info: Internal Builder is used for build
+g++ -std=c++1y -O0 -g3 -Wall -c -fmessage-length=0 -Wall -Werror=return-type -o "myCode\\Temperature.o" "..\\myCode\\Temperature.cpp" 
+..\myCode\Temperature.cpp: In constructor 'Temperature::Temperature(uint16_t, float)':
+..\myCode\Temperature.cpp:12:90: error: no matching function for call to 'Measurement::Measurement()'
+   12 | Temperature::Temperature(uint16_t timestamp, float temperature) : temperature(temperature)
+      |                                                                                          ^
+In file included from ..\myCode\Temperature.h:11,
+                 from ..\myCode\Temperature.cpp:8:
+..\myCode\Measurement.h:24:9: note: candidate: 'Measurement::Measurement(uint16_t)'
+   24 |         Measurement(uint16_t timestamp);
+      |         ^~~~~~~~~~~
+..\myCode\Measurement.h:24:9: note:   candidate expects 1 argument, 0 provided
+..\myCode\Measurement.h:19:7: note: candidate: 'constexpr Measurement::Measurement(const Measurement&)'
+   19 | class Measurement
+      |       ^~~~~~~~~~~
+..\myCode\Measurement.h:19:7: note:   candidate expects 1 argument, 0 provided
+..\myCode\Temperature.cpp:14:33: error: cannot call constructor 'Measurement::Measurement' directly [-fpermissive]
+   14 |         Measurement::Measurement(timestamp);
+      |         ~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~
+..\myCode\Temperature.cpp:14:33: note: for a function-style cast, remove the redundant '::Measurement'
+18:37:57 **** Incremental Build of configuration Debug for project MeasurementDb ****
+Info: Internal Builder is used for build
+g++ -std=c++1y -O0 -g3 -Wall -c -fmessage-length=0 -Wall -Werror=return-type -o "myCode\\Measurement.o" "..\\myCode\\Measurement.cpp" 
+g++ -std=c++1y -O0 -g3 -Wall -c -fmessage-length=0 -Wall -Werror=return-type -o "myCode\\Temperature.o" "..\\myCode\\Temperature.cpp" 
+..\myCode\Temperature.cpp: In constructor 'Temperature::Temperature(uint16_t, float)':
+..\myCode\Temperature.cpp:12:90: error: no matching function for call to 'Measurement::Measurement()'
+   12 | Temperature::Temperature(uint16_t timestamp, float temperature) : temperature(temperature)
+      |                                                                                          ^
+In file included from ..\myCode\Temperature.h:11,
+                 from ..\myCode\Temperature.cpp:8:
+..\myCode\Measurement.h:24:9: note: candidate: 'Measurement::Measurement(uint16_t)'
+   24 |         Measurement(uint16_t timestamp);
+      |         ^~~~~~~~~~~
+..\myCode\Measurement.h:24:9: note:   candidate expects 1 argument, 0 provided
+..\myCode\Measurement.h:19:7: note: candidate: 'constexpr Measurement::Measurement(const Measurement&)'
+   19 | class Measurement
+      |       ^~~~~~~~~~~
+..\myCode\Measurement.h:19:7: note:   candidate expects 1 argument, 0 provided
+..\myCode\Temperature.cpp:14:21: error: expected unqualified-id before '=' token
+   14 |         Measurement = measurement(timestamp);
+      |                     ^
+18:40:15 **** Incremental Build of configuration Debug for project MeasurementDb ****
+Info: Internal Builder is used for build
+g++ -std=c++1y -O0 -g3 -Wall -c -fmessage-length=0 -Wall -Werror=return-type -o "myCode\\Temperature.o" "..\\myCode\\Temperature.cpp" 
+In file included from ..\myCode\Temperature.cpp:8:
+..\myCode\Temperature.h: In constructor 'Temperature::Temperature(uint16_t, float)':
+..\myCode\Temperature.h:16:15: warning: 'Temperature::temperature' will be initialized after [-Wreorder]
+   16 |         float temperature;
+      |               ^~~~~~~~~~~
+..\myCode\Temperature.cpp:12:114: warning:   base 'Measurement' [-Wreorder]
+   12 | Temperature::Temperature(uint16_t timestamp, float temperature) : temperature(temperature), Measurement(timestamp)
+      |                                                                                                                  ^
+..\myCode\Temperature.cpp:12:1: warning:   when initialized here [-Wreorder]
+   12 | Temperature::Temperature(uint16_t timestamp, float temperature) : temperature(temperature), Measurement(timestamp)
+      | ^~~~~~~~~~~
+g++ -o MeasurementDb.exe "myCode\\Measurement.o" "myCode\\Temperature.o" "myCode\\main.o" 
+C:/Program Files/GIT/eclipse/mingw/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/13.2.0/../../../../x86_64-w64-mingw32/bin/ld.exe: myCode\Measurement.o:Measurement.cp:(.rdata$_ZTV11Measurement[_ZTV11Measurement]+0x20): undefined reference to `Measurement::toString[abi:cxx11]() const'
+collect2.exe: error: ld returned 1 exit status
+18:40:37 **** Incremental Build of configuration Debug for project MeasurementDb ****
+Info: Internal Builder is used for build
+g++ -std=c++1y -O0 -g3 -Wall -c -fmessage-length=0 -Wall -Werror=return-type -o "myCode\\Temperature.o" "..\\myCode\\Temperature.cpp" 
+g++ -o MeasurementDb.exe "myCode\\Measurement.o" "myCode\\Temperature.o" "myCode\\main.o" 
+C:/Program Files/GIT/eclipse/mingw/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/13.2.0/../../../../x86_64-w64-mingw32/bin/ld.exe: myCode\Measurement.o:Measurement.cp:(.rdata$_ZTV11Measurement[_ZTV11Measurement]+0x20): undefined reference to `Measurement::toString[abi:cxx11]() const'
+collect2.exe: error: ld returned 1 exit status
+18:41:22 **** Incremental Build of configuration Debug for project MeasurementDb ****
+Info: Internal Builder is used for build
+g++ -std=c++1y -O0 -g3 -Wall -c -fmessage-length=0 -Wall -Werror=return-type -o "myCode\\Measurement.o" "..\\myCode\\Measurement.cpp" 
+g++ -std=c++1y -O0 -g3 -Wall -c -fmessage-length=0 -Wall -Werror=return-type -o "myCode\\Temperature.o" "..\\myCode\\Temperature.cpp" 
+g++ -o MeasurementDb.exe "myCode\\Measurement.o" "myCode\\Temperature.o" "myCode\\main.o" 
+18:44:30 **** Incremental Build of configuration Debug for project MeasurementDb ****
+Info: Internal Builder is used for build
+g++ -std=c++1y -O0 -g3 -Wall -c -fmessage-length=0 -Wall -Werror=return-type -o "myCode\\Measurement.o" "..\\myCode\\Measurement.cpp" 
+g++ -std=c++1y -O0 -g3 -Wall -c -fmessage-length=0 -Wall -Werror=return-type -o "myCode\\Temperature.o" "..\\myCode\\Temperature.cpp" 
+g++ -std=c++1y -O0 -g3 -Wall -c -fmessage-length=0 -Wall -Werror=return-type -o "myCode\\main.o" "..\\myCode\\main.cpp" 
+g++ -o MeasurementDb.exe "myCode\\Measurement.o" "myCode\\Temperature.o" "myCode\\main.o" 
+18:45:15 **** Incremental Build of configuration Debug for project MeasurementDb ****
+Info: Internal Builder is used for build
+g++ -std=c++1y -O0 -g3 -Wall -c -fmessage-length=0 -Wall -Werror=return-type -o "myCode\\main.o" "..\\myCode\\main.cpp" 
+g++ -o MeasurementDb.exe "myCode\\Measurement.o" "myCode\\Temperature.o" "myCode\\main.o" 
+Info: Nothing to build for MeasurementDb
+18:45:35 **** Incremental Build of configuration Debug for project MeasurementDb ****
+Info: Internal Builder is used for build
+g++ -std=c++1y -O0 -g3 -Wall -c -fmessage-length=0 -Wall -Werror=return-type -o "myCode\\main.o" "..\\myCode\\main.cpp" 
+g++ -o MeasurementDb.exe "myCode\\Measurement.o" "myCode\\Temperature.o" "myCode\\main.o" 
+18:48:19 **** Incremental Build of configuration Debug for project MeasurementDb ****
+Info: Internal Builder is used for build
+g++ -std=c++1y -O0 -g3 -Wall -c -fmessage-length=0 -Wall -Werror=return-type -o "myCode\\main.o" "..\\myCode\\main.cpp" 
+g++ -o MeasurementDb.exe "myCode\\Measurement.o" "myCode\\Temperature.o" "myCode\\main.o" 
+Info: Nothing to build for MeasurementDb
+18:48:32 **** Incremental Build of configuration Debug for project MeasurementDb ****
+Info: Internal Builder is used for build
+g++ -std=c++1y -O0 -g3 -Wall -c -fmessage-length=0 -Wall -Werror=return-type -o "myCode\\main.o" "..\\myCode\\main.cpp" 
+g++ -o MeasurementDb.exe "myCode\\Measurement.o" "myCode\\Temperature.o" "myCode\\main.o" 
+18:49:45 **** Incremental Build of configuration Debug for project MeasurementDb ****
+Info: Internal Builder is used for build
+g++ -std=c++1y -O0 -g3 -Wall -c -fmessage-length=0 -Wall -Werror=return-type -o "myCode\\Temperature.o" "..\\myCode\\Temperature.cpp" 
+In file included from ..\myCode\Temperature.h:11,
+                 from ..\myCode\Temperature.cpp:8:
+..\myCode\Measurement.h:32:23: error: 'std::ostream& Measurement::operator<<(std::ostream&, Measurement&)' must have exactly one argument
+   32 |         std::ostream& operator<<(std::ostream& lhs, Measurement& rhs);
+      |                       ^~~~~~~~
+18:50:11 **** Incremental Build of configuration Debug for project MeasurementDb ****
+Info: Internal Builder is used for build
+g++ -std=c++1y -O0 -g3 -Wall -c -fmessage-length=0 -Wall -Werror=return-type -o "myCode\\main.o" "..\\myCode\\main.cpp" 
+g++ -std=c++1y -O0 -g3 -Wall -c -fmessage-length=0 -Wall -Werror=return-type -o "myCode\\Measurement.o" "..\\myCode\\Measurement.cpp" 
+g++ -std=c++1y -O0 -g3 -Wall -c -fmessage-length=0 -Wall -Werror=return-type -o "myCode\\Temperature.o" "..\\myCode\\Temperature.cpp" 
+g++ -o MeasurementDb.exe "myCode\\Measurement.o" "myCode\\Temperature.o" "myCode\\main.o" 
+18:54:42 **** Incremental Build of configuration Debug for project MeasurementDb ****
+Info: Internal Builder is used for build
+g++ -std=c++1y -O0 -g3 -Wall -c -fmessage-length=0 -Wall -Werror=return-type -o "myCode\\main.o" "..\\myCode\\main.cpp" 
+..\myCode\main.cpp: In function 'int main()':
+..\myCode\main.cpp:23:21: error: cannot declare variable 'test' to be of abstract type 'Measurement'
+   23 |         Measurement test(6);
+      |                     ^~~~
+In file included from ..\myCode\Temperature.h:11,
+                 from ..\myCode\main.cpp:8:
+..\myCode\Measurement.h:19:7: note:   because the following virtual functions are pure within 'Measurement':
+   19 | class Measurement
+      |       ^~~~~~~~~~~
+..\myCode\Measurement.h:29:29: note:     'virtual std::string Measurement::toString() const'
+   29 |         virtual std::string toString() const = 0;
+      |                             ^~~~~~~~
+18:55:34 **** Incremental Build of configuration Debug for project MeasurementDb ****
+Info: Internal Builder is used for build
+g++ -std=c++1y -O0 -g3 -Wall -c -fmessage-length=0 -Wall -Werror=return-type -o "myCode\\main.o" "..\\myCode\\main.cpp" 
+g++ -std=c++1y -O0 -g3 -Wall -c -fmessage-length=0 -Wall -Werror=return-type -o "myCode\\Measurement.o" "..\\myCode\\Measurement.cpp" 
+..\myCode\Measurement.cpp: In function 'std::ostream& operator<<(std::ostream&, Measurement&)':
+..\myCode\Measurement.cpp:55:36: error: 'uint16_t Measurement::timestamp' is private within this context
+   55 |         lhs << rhs.toTimeOfDay(rhs.timestamp) << " " << rhs.toString();
+      |                                    ^~~~~~~~~
+In file included from ..\myCode\Measurement.cpp:8:
+..\myCode\Measurement.h:22:18: note: declared private here
+   22 |         uint16_t timestamp;
+      |                  ^~~~~~~~~
+18:55:48 **** Incremental Build of configuration Debug for project MeasurementDb ****
+Info: Internal Builder is used for build
+g++ -std=c++1y -O0 -g3 -Wall -c -fmessage-length=0 -Wall -Werror=return-type -o "myCode\\Measurement.o" "..\\myCode\\Measurement.cpp" 
+g++ -o MeasurementDb.exe "myCode\\Measurement.o" "myCode\\Temperature.o" "myCode\\main.o" 
+Info: Nothing to build for MeasurementDb
+19:04:40 **** Incremental Build of configuration Debug for project MeasurementDb ****
+Info: Internal Builder is used for build
+g++ -std=c++1y -O0 -g3 -Wall -c -fmessage-length=0 -Wall -Werror=return-type -o "myCode\\MeasurementDb.o" "..\\myCode\\MeasurementDb.cpp" 
+g++ -std=c++1y -O0 -g3 -Wall -c -fmessage-length=0 -Wall -Werror=return-type -o "myCode\\Humidity.o" "..\\myCode\\Humidity.cpp" 
+g++ -o MeasurementDb.exe "myCode\\Humidity.o" "myCode\\Measurement.o" "myCode\\MeasurementDb.o" "myCode\\Temperature.o" "myCode\\main.o" 
+19:26:14 **** Incremental Build of configuration Debug for project MeasurementDb ****
+Info: Internal Builder is used for build
+g++ -std=c++1y -O0 -g3 -Wall -c -fmessage-length=0 -Wall -Werror=return-type -o "myCode\\MeasurementDb.o" "..\\myCode\\MeasurementDb.cpp" 
+g++ -o MeasurementDb.exe "myCode\\Humidity.o" "myCode\\Measurement.o" "myCode\\MeasurementDb.o" "myCode\\Temperature.o" "myCode\\main.o" 
+19:30:07 **** Incremental Build of configuration Debug for project MeasurementDb ****
+Info: Internal Builder is used for build
+g++ -std=c++1y -O0 -g3 -Wall -c -fmessage-length=0 -Wall -Werror=return-type -o "myCode\\main.o" "..\\myCode\\main.cpp" 
+..\myCode\main.cpp: In function 'int main()':
+..\myCode\main.cpp:28:20: error: 'Humidity' was not declared in this scope
+   28 |         shared_ptr<Humidity> measure1 = make_shared<Humidity>(8, 80);
+      |                    ^~~~~~~~
+..\myCode\main.cpp:28:28: error: template argument 1 is invalid
+   28 |         shared_ptr<Humidity> measure1 = make_shared<Humidity>(8, 80);
+      |                            ^
+..\myCode\main.cpp:28:62: error: no matching function for call to 'make_shared<Humidity>(int, int)'
+   28 |         shared_ptr<Humidity> measure1 = make_shared<Humidity>(8, 80);
+      |                                         ~~~~~~~~~~~~~~~~~~~~~^~~~~~~
+In file included from C:/Program Files/GIT/eclipse/mingw/mingw64/include/c++/13.2.0/memory:80,
+                 from ..\myCode\Measurement.h:16,
+                 from ..\myCode\Temperature.h:11,
+                 from ..\myCode\main.cpp:8:
+C:/Program Files/GIT/eclipse/mingw/mingw64/include/c++/13.2.0/bits/shared_ptr.h:1005:5: note: candidate: 'template<class _Tp, class ... _Args> std::shared_ptr<typename std::enable_if<(! std::is_array< <template-parameter-1-1> >::value), _Tp>::type> std::make_shared(_Args&& ...)'
+ 1005 |     make_shared(_Args&&... __args)
+      |     ^~~~~~~~~~~
+C:/Program Files/GIT/eclipse/mingw/mingw64/include/c++/13.2.0/bits/shared_ptr.h:1005:5: note:   template argument deduction/substitution failed:
+..\myCode\main.cpp:33:35: error: cannot convert 'int' to 'std::shared_ptr<Measurement>'
+   33 |         db.addMeasurement("Bath", measure1);
+      |                                   ^~~~~~~~
+      |                                   |
+      |                                   int
+In file included from ..\myCode\main.cpp:9:
+..\myCode\MeasurementDb.h:26:87: note:   initializing argument 2 of 'void MeasurementDb::addMeasurement(const std::string&, std::shared_ptr<Measurement>)'
+   26 |         void addMeasurement(const std::string& location, std::shared_ptr<Measurement> measurement);
+      |                                                          ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~
+19:30:29 **** Incremental Build of configuration Debug for project MeasurementDb ****
+Info: Internal Builder is used for build
+g++ -std=c++1y -O0 -g3 -Wall -c -fmessage-length=0 -Wall -Werror=return-type -o "myCode\\main.o" "..\\myCode\\main.cpp" 
+g++ -o MeasurementDb.exe "myCode\\Humidity.o" "myCode\\Measurement.o" "myCode\\MeasurementDb.o" "myCode\\Temperature.o" "myCode\\main.o" 
+Info: Nothing to build for MeasurementDb
+19:30:51 **** Incremental Build of configuration Debug for project MeasurementDb ****
+Info: Internal Builder is used for build
+g++ -std=c++1y -O0 -g3 -Wall -c -fmessage-length=0 -Wall -Werror=return-type -o "myCode\\MeasurementDb.o" "..\\myCode\\MeasurementDb.cpp" 
+g++ -o MeasurementDb.exe "myCode\\Humidity.o" "myCode\\Measurement.o" "myCode\\MeasurementDb.o" "myCode\\Temperature.o" "myCode\\main.o" 
+19:31:42 **** Incremental Build of configuration Debug for project MeasurementDb ****
+Info: Internal Builder is used for build
+g++ -std=c++1y -O0 -g3 -Wall -c -fmessage-length=0 -Wall -Werror=return-type -o "myCode\\MeasurementDb.o" "..\\myCode\\MeasurementDb.cpp" 
+g++ -std=c++1y -O0 -g3 -Wall -c -fmessage-length=0 -Wall -Werror=return-type -o "myCode\\Temperature.o" "..\\myCode\\Temperature.cpp" 
+g++ -o MeasurementDb.exe "myCode\\Humidity.o" "myCode\\Measurement.o" "myCode\\MeasurementDb.o" "myCode\\Temperature.o" "myCode\\main.o" 
+19:32:08 **** Incremental Build of configuration Debug for project MeasurementDb ****
+Info: Internal Builder is used for build
+g++ -std=c++1y -O0 -g3 -Wall -c -fmessage-length=0 -Wall -Werror=return-type -o "myCode\\main.o" "..\\myCode\\main.cpp" 
+g++ -o MeasurementDb.exe "myCode\\Humidity.o" "myCode\\Measurement.o" "myCode\\MeasurementDb.o" "myCode\\Temperature.o" "myCode\\main.o" 
+19:32:24 **** Incremental Build of configuration Debug for project MeasurementDb ****
+Info: Internal Builder is used for build
+g++ -std=c++1y -O0 -g3 -Wall -c -fmessage-length=0 -Wall -Werror=return-type -o "myCode\\main.o" "..\\myCode\\main.cpp" 
+g++ -o MeasurementDb.exe "myCode\\Humidity.o" "myCode\\Measurement.o" "myCode\\MeasurementDb.o" "myCode\\Temperature.o" "myCode\\main.o" 
+19:34:08 **** Incremental Build of configuration Debug for project MeasurementDb ****
+Info: Internal Builder is used for build
+g++ -std=c++1y -O0 -g3 -Wall -c -fmessage-length=0 -Wall -Werror=return-type -o "myCode\\MeasurementDb.o" "..\\myCode\\MeasurementDb.cpp" 
+g++ -o MeasurementDb.exe "myCode\\Humidity.o" "myCode\\Measurement.o" "myCode\\MeasurementDb.o" "myCode\\Temperature.o" "myCode\\main.o" 
+19:34:20 **** Incremental Build of configuration Debug for project MeasurementDb ****
+Info: Internal Builder is used for build
+g++ -std=c++1y -O0 -g3 -Wall -c -fmessage-length=0 -Wall -Werror=return-type -o "myCode\\MeasurementDb.o" "..\\myCode\\MeasurementDb.cpp" 
+g++ -o MeasurementDb.exe "myCode\\Humidity.o" "myCode\\Measurement.o" "myCode\\MeasurementDb.o" "myCode\\Temperature.o" "myCode\\main.o" 
+21:53:07 **** Incremental Build of configuration Debug for project MeasurementDb ****
+Info: Internal Builder is used for build
+g++ -std=c++1y -O0 -g3 -Wall -c -fmessage-length=0 -Wall -Werror=return-type -o "myCode\\main.o" "..\\myCode\\main.cpp" 
+g++ -o MeasurementDb.exe "myCode\\Humidity.o" "myCode\\Measurement.o" "myCode\\MeasurementDb.o" "myCode\\Temperature.o" "myCode\\main.o" 
+22:12:26 **** Incremental Build of configuration Debug for project MeasurementDb ****
+Info: Internal Builder is used for build
+g++ -std=c++1y -O0 -g3 -Wall -c -fmessage-length=0 -Wall -Werror=return-type -o "myCode\\MeasurementDb.o" "..\\myCode\\MeasurementDb.cpp" 
+g++ -std=c++1y -O0 -g3 -Wall -c -fmessage-length=0 -Wall -Werror=return-type -o "myCode\\main.o" "..\\myCode\\main.cpp" 
+g++ -o MeasurementDb.exe "myCode\\Humidity.o" "myCode\\Measurement.o" "myCode\\MeasurementDb.o" "myCode\\Temperature.o" "myCode\\main.o" 
+22:12:51 **** Incremental Build of configuration Debug for project MeasurementDb ****
+Info: Internal Builder is used for build
+g++ -std=c++1y -O0 -g3 -Wall -c -fmessage-length=0 -Wall -Werror=return-type -o "myCode\\main.o" "..\\myCode\\main.cpp" 
+g++ -o MeasurementDb.exe "myCode\\Humidity.o" "myCode\\Measurement.o" "myCode\\MeasurementDb.o" "myCode\\Temperature.o" "myCode\\main.o" 
+22:14:42 **** Incremental Build of configuration Debug for project MeasurementDb ****
+Info: Internal Builder is used for build
+g++ -std=c++1y -O0 -g3 -Wall -c -fmessage-length=0 -Wall -Werror=return-type -o "myCode\\main.o" "..\\myCode\\main.cpp" 
+g++ -std=c++1y -O0 -g3 -Wall -c -fmessage-length=0 -Wall -Werror=return-type -o "myCode\\MeasurementDb.o" "..\\myCode\\MeasurementDb.cpp" 
+g++ -o MeasurementDb.exe "myCode\\Humidity.o" "myCode\\Measurement.o" "myCode\\MeasurementDb.o" "myCode\\Temperature.o" "myCode\\main.o" 
+Info: Nothing to build for MeasurementDb
+22:23:59 **** Incremental Build of configuration Debug for project MeasurementDb ****
+Info: Internal Builder is used for build
+g++ -std=c++1y -O0 -g3 -Wall -c -fmessage-length=0 -Wall -Werror=return-type -o "myCode\\Humidity.o" "..\\myCode\\Humidity.cpp" 
+g++ -std=c++1y -O0 -g3 -Wall -c -fmessage-length=0 -Wall -Werror=return-type -o "myCode\\main.o" "..\\myCode\\main.cpp" 
+g++ -std=c++1y -O0 -g3 -Wall -c -fmessage-length=0 -Wall -Werror=return-type -o "myCode\\Temperature.o" "..\\myCode\\Temperature.cpp" 
+g++ -std=c++1y -O0 -g3 -Wall -c -fmessage-length=0 -Wall -Werror=return-type -o "myCode\\Measurement.o" "..\\myCode\\Measurement.cpp" 
+g++ -std=c++1y -O0 -g3 -Wall -c -fmessage-length=0 -Wall -Werror=return-type -o "myCode\\MeasurementDb.o" "..\\myCode\\MeasurementDb.cpp" 
+g++ -o MeasurementDb.exe "myCode\\Humidity.o" "myCode\\Measurement.o" "myCode\\MeasurementDb.o" "myCode\\Temperature.o" "myCode\\main.o" 
+22:25:47 **** Incremental Build of configuration Debug for project MeasurementDb ****
+Info: Internal Builder is used for build
+g++ -std=c++1y -O0 -g3 -Wall -c -fmessage-length=0 -Wall -Werror=return-type -o "myCode\\MeasurementDb.o" "..\\myCode\\MeasurementDb.cpp" 
+g++ -o MeasurementDb.exe "myCode\\Humidity.o" "myCode\\Measurement.o" "myCode\\MeasurementDb.o" "myCode\\Temperature.o" "myCode\\main.o" 
+22:26:51 **** Incremental Build of configuration Debug for project MeasurementDb ****
+Info: Internal Builder is used for build
+g++ -std=c++1y -O0 -g3 -Wall -c -fmessage-length=0 -Wall -Werror=return-type -o "myCode\\Measurement.o" "..\\myCode\\Measurement.cpp" 
+..\myCode\Measurement.cpp: In static member function 'static void Measurement::parseLine(const std::string&, uint16_t&, std::string&, std::string&)':
+..\myCode\Measurement.cpp:63:16: error: no matching function for call to 'getline(std::istream&, const std::string&)'
+   63 |         getline(cin, line);
+      |         ~~~~~~~^~~~~~~~~~~
+In file included from C:/Program Files/GIT/eclipse/mingw/mingw64/include/c++/13.2.0/string:55,
+                 from ..\myCode\Measurement.h:12,
+                 from ..\myCode\Measurement.cpp:8:
+C:/Program Files/GIT/eclipse/mingw/mingw64/include/c++/13.2.0/bits/basic_string.tcc:893:5: note: candidate: 'template<class _CharT, class _Traits, class _Alloc> std::basic_istream<_CharT, _Traits>& std::getline(basic_istream<_CharT, _Traits>&, __cxx11::basic_string<_CharT, _Traits, _Alloc>&, _CharT)'
+  893 |     getline(basic_istream<_CharT, _Traits>& __in,
+      |     ^~~~~~~
+C:/Program Files/GIT/eclipse/mingw/mingw64/include/c++/13.2.0/bits/basic_string.tcc:893:5: note:   template argument deduction/substitution failed:
+..\myCode\Measurement.cpp:63:16: note:   types 'std::__cxx11::basic_string<_CharT, _Traits, _Alloc>' and 'const std::string' {aka 'const std::__cxx11::basic_string<char>'} have incompatible cv-qualifiers
+   63 |         getline(cin, line);
+      |         ~~~~~~~^~~~~~~~~~~
+In file included from C:/Program Files/GIT/eclipse/mingw/mingw64/include/c++/13.2.0/string:54:
+C:/Program Files/GIT/eclipse/mingw/mingw64/include/c++/13.2.0/bits/basic_string.h:4060:5: note: candidate: 'template<class _CharT, class _Traits, class _Alloc> std::basic_istream<_CharT, _Traits>& std::getline(basic_istream<_CharT, _Traits>&, __cxx11::basic_string<_CharT, _Traits, _Alloc>&)'
+ 4060 |     getline(basic_istream<_CharT, _Traits>& __is,
+      |     ^~~~~~~
+C:/Program Files/GIT/eclipse/mingw/mingw64/include/c++/13.2.0/bits/basic_string.h:4060:5: note:   template argument deduction/substitution failed:
+..\myCode\Measurement.cpp:63:16: note:   types 'std::__cxx11::basic_string<_CharT, _Traits, _Alloc>' and 'const std::string' {aka 'const std::__cxx11::basic_string<char>'} have incompatible cv-qualifiers
+   63 |         getline(cin, line);
+      |         ~~~~~~~^~~~~~~~~~~
+C:/Program Files/GIT/eclipse/mingw/mingw64/include/c++/13.2.0/bits/basic_string.h:4068:5: note: candidate: 'template<class _CharT, class _Traits, class _Alloc> std::basic_istream<_CharT, _Traits>& std::getline(basic_istream<_CharT, _Traits>&&, __cxx11::basic_string<_CharT, _Traits, _Alloc>&, _CharT)'
+ 4068 |     getline(basic_istream<_CharT, _Traits>&& __is,
+      |     ^~~~~~~
+C:/Program Files/GIT/eclipse/mingw/mingw64/include/c++/13.2.0/bits/basic_string.h:4068:5: note:   template argument deduction/substitution failed:
+..\myCode\Measurement.cpp:63:16: note:   types 'std::__cxx11::basic_string<_CharT, _Traits, _Alloc>' and 'const std::string' {aka 'const std::__cxx11::basic_string<char>'} have incompatible cv-qualifiers
+   63 |         getline(cin, line);
+      |         ~~~~~~~^~~~~~~~~~~
+C:/Program Files/GIT/eclipse/mingw/mingw64/include/c++/13.2.0/bits/basic_string.h:4075:5: note: candidate: 'template<class _CharT, class _Traits, class _Alloc> std::basic_istream<_CharT, _Traits>& std::getline(basic_istream<_CharT, _Traits>&&, __cxx11::basic_string<_CharT, _Traits, _Alloc>&)'
+ 4075 |     getline(basic_istream<_CharT, _Traits>&& __is,
+      |     ^~~~~~~
+C:/Program Files/GIT/eclipse/mingw/mingw64/include/c++/13.2.0/bits/basic_string.h:4075:5: note:   template argument deduction/substitution failed:
+..\myCode\Measurement.cpp:63:16: note:   types 'std::__cxx11::basic_string<_CharT, _Traits, _Alloc>' and 'const std::string' {aka 'const std::__cxx11::basic_string<char>'} have incompatible cv-qualifiers
+   63 |         getline(cin, line);
+      |         ~~~~~~~^~~~~~~~~~~
+22:28:50 **** Incremental Build of configuration Debug for project MeasurementDb ****
+Info: Internal Builder is used for build
+g++ -std=c++1y -O0 -g3 -Wall -c -fmessage-length=0 -Wall -Werror=return-type -o "myCode\\Measurement.o" "..\\myCode\\Measurement.cpp" 
+..\myCode\Measurement.cpp: In static member function 'static void Measurement::parseLine(const std::string&, uint16_t&, std::string&, std::string&)':
+..\myCode\Measurement.cpp:65:16: error: no matching function for call to 'getline(std::istringstream&, const std::string&)'
+   65 |         getline(iss, line);
+      |         ~~~~~~~^~~~~~~~~~~
+In file included from C:/Program Files/GIT/eclipse/mingw/mingw64/include/c++/13.2.0/string:55,
+                 from ..\myCode\Measurement.h:12,
+                 from ..\myCode\Measurement.cpp:8:
+C:/Program Files/GIT/eclipse/mingw/mingw64/include/c++/13.2.0/bits/basic_string.tcc:893:5: note: candidate: 'template<class _CharT, class _Traits, class _Alloc> std::basic_istream<_CharT, _Traits>& std::getline(basic_istream<_CharT, _Traits>&, __cxx11::basic_string<_CharT, _Traits, _Alloc>&, _CharT)'
+  893 |     getline(basic_istream<_CharT, _Traits>& __in,
+      |     ^~~~~~~
+C:/Program Files/GIT/eclipse/mingw/mingw64/include/c++/13.2.0/bits/basic_string.tcc:893:5: note:   template argument deduction/substitution failed:
+..\myCode\Measurement.cpp:65:16: note:   types 'std::__cxx11::basic_string<_CharT, _Traits, _Alloc>' and 'const std::string' {aka 'const std::__cxx11::basic_string<char>'} have incompatible cv-qualifiers
+   65 |         getline(iss, line);
+      |         ~~~~~~~^~~~~~~~~~~
+In file included from C:/Program Files/GIT/eclipse/mingw/mingw64/include/c++/13.2.0/string:54:
+C:/Program Files/GIT/eclipse/mingw/mingw64/include/c++/13.2.0/bits/basic_string.h:4060:5: note: candidate: 'template<class _CharT, class _Traits, class _Alloc> std::basic_istream<_CharT, _Traits>& std::getline(basic_istream<_CharT, _Traits>&, __cxx11::basic_string<_CharT, _Traits, _Alloc>&)'
+ 4060 |     getline(basic_istream<_CharT, _Traits>& __is,
+      |     ^~~~~~~
+C:/Program Files/GIT/eclipse/mingw/mingw64/include/c++/13.2.0/bits/basic_string.h:4060:5: note:   template argument deduction/substitution failed:
+..\myCode\Measurement.cpp:65:16: note:   types 'std::__cxx11::basic_string<_CharT, _Traits, _Alloc>' and 'const std::string' {aka 'const std::__cxx11::basic_string<char>'} have incompatible cv-qualifiers
+   65 |         getline(iss, line);
+      |         ~~~~~~~^~~~~~~~~~~
+C:/Program Files/GIT/eclipse/mingw/mingw64/include/c++/13.2.0/bits/basic_string.h:4068:5: note: candidate: 'template<class _CharT, class _Traits, class _Alloc> std::basic_istream<_CharT, _Traits>& std::getline(basic_istream<_CharT, _Traits>&&, __cxx11::basic_string<_CharT, _Traits, _Alloc>&, _CharT)'
+ 4068 |     getline(basic_istream<_CharT, _Traits>&& __is,
+      |     ^~~~~~~
+C:/Program Files/GIT/eclipse/mingw/mingw64/include/c++/13.2.0/bits/basic_string.h:4068:5: note:   template argument deduction/substitution failed:
+..\myCode\Measurement.cpp:65:16: note:   types 'std::__cxx11::basic_string<_CharT, _Traits, _Alloc>' and 'const std::string' {aka 'const std::__cxx11::basic_string<char>'} have incompatible cv-qualifiers
+   65 |         getline(iss, line);
+      |         ~~~~~~~^~~~~~~~~~~
+C:/Program Files/GIT/eclipse/mingw/mingw64/include/c++/13.2.0/bits/basic_string.h:4075:5: note: candidate: 'template<class _CharT, class _Traits, class _Alloc> std::basic_istream<_CharT, _Traits>& std::getline(basic_istream<_CharT, _Traits>&&, __cxx11::basic_string<_CharT, _Traits, _Alloc>&)'
+ 4075 |     getline(basic_istream<_CharT, _Traits>&& __is,
+      |     ^~~~~~~
+C:/Program Files/GIT/eclipse/mingw/mingw64/include/c++/13.2.0/bits/basic_string.h:4075:5: note:   template argument deduction/substitution failed:
+..\myCode\Measurement.cpp:65:16: note:   types 'std::__cxx11::basic_string<_CharT, _Traits, _Alloc>' and 'const std::string' {aka 'const std::__cxx11::basic_string<char>'} have incompatible cv-qualifiers
+   65 |         getline(iss, line);
+      |         ~~~~~~~^~~~~~~~~~~
+22:34:05 **** Incremental Build of configuration Debug for project MeasurementDb ****
+Info: Internal Builder is used for build
+g++ -std=c++1y -O0 -g3 -Wall -c -fmessage-length=0 -Wall -Werror=return-type -o "myCode\\Measurement.o" "..\\myCode\\Measurement.cpp" 
+g++ -o MeasurementDb.exe "myCode\\Humidity.o" "myCode\\Measurement.o" "myCode\\MeasurementDb.o" "myCode\\Temperature.o" "myCode\\main.o" 
+23:05:28 **** Incremental Build of configuration Debug for project MeasurementDb ****
+Info: Internal Builder is used for build
+g++ -std=c++1y -O0 -g3 -Wall -c -fmessage-length=0 -Wall -Werror=return-type -o "myCode\\Measurement.o" "..\\myCode\\Measurement.cpp" 
+..\myCode\Measurement.cpp: In static member function 'static void Measurement::parseLine(const std::string&, uint16_t&, std::string&, std::string&)':
+..\myCode\Measurement.cpp:63:18: error: 'this' is unavailable for static member functions
+   63 |         auto x = this->splitAt(line, ';');
+      |                  ^~~~
+23:05:48 **** Incremental Build of configuration Debug for project MeasurementDb ****
+Info: Internal Builder is used for build
+g++ -std=c++1y -O0 -g3 -Wall -c -fmessage-length=0 -Wall -Werror=return-type -o "myCode\\MeasurementDb.o" "..\\myCode\\MeasurementDb.cpp" 
+g++ -std=c++1y -O0 -g3 -Wall -c -fmessage-length=0 -Wall -Werror=return-type -o "myCode\\Measurement.o" "..\\myCode\\Measurement.cpp" 
+..\myCode\Measurement.cpp: In static member function 'static void Measurement::parseLine(const std::string&, uint16_t&, std::string&, std::string&)':
+..\myCode\Measurement.cpp:63:25: error: cannot call member function 'std::string Measurement::splitAt(std::string&, char)' without object
+   63 |         auto x = splitAt(line, ';');
+      |                  ~~~~~~~^~~~~~~~~~~
+23:06:05 **** Incremental Build of configuration Debug for project MeasurementDb ****
+Info: Internal Builder is used for build
+g++ -std=c++1y -O0 -g3 -Wall -c -fmessage-length=0 -Wall -Werror=return-type -o "myCode\\Humidity.o" "..\\myCode\\Humidity.cpp" 
+g++ -std=c++1y -O0 -g3 -Wall -c -fmessage-length=0 -Wall -Werror=return-type -o "myCode\\Temperature.o" "..\\myCode\\Temperature.cpp" 
+g++ -std=c++1y -O0 -g3 -Wall -c -fmessage-length=0 -Wall -Werror=return-type -o "myCode\\main.o" "..\\myCode\\main.cpp" 
+g++ -std=c++1y -O0 -g3 -Wall -c -fmessage-length=0 -Wall -Werror=return-type -o "myCode\\Measurement.o" "..\\myCode\\Measurement.cpp" 
+..\myCode\Measurement.cpp: In static member function 'static void Measurement::parseLine(const std::string&, uint16_t&, std::string&, std::string&)':
+..\myCode\Measurement.cpp:63:38: error: cannot call member function 'std::string Measurement::splitAt(std::string&, char)' without object
+   63 |         auto x = Measurement::splitAt(line, ';');
+      |                  ~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~
+23:12:22 **** Incremental Build of configuration Debug for project MeasurementDb ****
+Info: Internal Builder is used for build
+g++ -std=c++1y -O0 -g3 -Wall -c -fmessage-length=0 -Wall -Werror=return-type -o "myCode\\Measurement.o" "..\\myCode\\Measurement.cpp" 
+g++ -o MeasurementDb.exe "myCode\\Humidity.o" "myCode\\Measurement.o" "myCode\\MeasurementDb.o" "myCode\\Temperature.o" "myCode\\main.o" 
+23:20:36 **** Incremental Build of configuration Debug for project MeasurementDb ****
+Info: Internal Builder is used for build
+g++ -std=c++1y -O0 -g3 -Wall -c -fmessage-length=0 -Wall -Werror=return-type -o "myCode\\Measurement.o" "..\\myCode\\Measurement.cpp" 
+g++ -std=c++1y -O0 -g3 -Wall -c -fmessage-length=0 -Wall -Werror=return-type -o "myCode\\main.o" "..\\myCode\\main.cpp" 
+g++ -o MeasurementDb.exe "myCode\\Humidity.o" "myCode\\Measurement.o" "myCode\\MeasurementDb.o" "myCode\\Temperature.o" "myCode\\main.o" 
+Info: Nothing to build for MeasurementDb
+23:30:35 **** Incremental Build of configuration Debug for project MeasurementDb ****
+Info: Internal Builder is used for build
+g++ -std=c++1y -O0 -g3 -Wall -c -fmessage-length=0 -Wall -Werror=return-type -o "myCode\\Measurement.o" "..\\myCode\\Measurement.cpp" 
+g++ -o MeasurementDb.exe "myCode\\Humidity.o" "myCode\\Measurement.o" "myCode\\MeasurementDb.o" "myCode\\Temperature.o" "myCode\\main.o" 
+23:41:41 **** Incremental Build of configuration Debug for project MeasurementDb ****
+Info: Internal Builder is used for build
+g++ -std=c++1y -O0 -g3 -Wall -c -fmessage-length=0 -Wall -Werror=return-type -o "myCode\\Measurement.o" "..\\myCode\\Measurement.cpp" 
+g++ -o MeasurementDb.exe "myCode\\Humidity.o" "myCode\\Measurement.o" "myCode\\MeasurementDb.o" "myCode\\Temperature.o" "myCode\\main.o" 
+23:46:13 **** Incremental Build of configuration Debug for project MeasurementDb ****
+Info: Internal Builder is used for build
+g++ -std=c++1y -O0 -g3 -Wall -c -fmessage-length=0 -Wall -Werror=return-type -o "myCode\\Measurement.o" "..\\myCode\\Measurement.cpp" 
+g++ -std=c++1y -O0 -g3 -Wall -c -fmessage-length=0 -Wall -Werror=return-type -o "myCode\\main.o" "..\\myCode\\main.cpp" 
+g++ -o MeasurementDb.exe "myCode\\Humidity.o" "myCode\\Measurement.o" "myCode\\MeasurementDb.o" "myCode\\Temperature.o" "myCode\\main.o" 
+23:46:55 **** Incremental Build of configuration Debug for project MeasurementDb ****
+Info: Internal Builder is used for build
+g++ -std=c++1y -O0 -g3 -Wall -c -fmessage-length=0 -Wall -Werror=return-type -o "myCode\\Measurement.o" "..\\myCode\\Measurement.cpp" 
+g++ -o MeasurementDb.exe "myCode\\Humidity.o" "myCode\\Measurement.o" "myCode\\MeasurementDb.o" "myCode\\Temperature.o" "myCode\\main.o" 
+00:33:37 **** Incremental Build of configuration Debug for project MeasurementDb ****
+Info: Internal Builder is used for build
+g++ -std=c++1y -O0 -g3 -Wall -c -fmessage-length=0 -Wall -Werror=return-type -o "myCode\\Measurement.o" "..\\myCode\\Measurement.cpp" 
+g++ -std=c++1y -O0 -g3 -Wall -c -fmessage-length=0 -Wall -Werror=return-type -o "myCode\\main.o" "..\\myCode\\main.cpp" 
+g++ -std=c++1y -O0 -g3 -Wall -c -fmessage-length=0 -Wall -Werror=return-type -o "myCode\\Temperature.o" "..\\myCode\\Temperature.cpp" 
+In file included from C:/Program Files/GIT/eclipse/mingw/mingw64/include/c++/13.2.0/bits/alloc_traits.h:33,
+                 from C:/Program Files/GIT/eclipse/mingw/mingw64/include/c++/13.2.0/ext/alloc_traits.h:34,
+                 from C:/Program Files/GIT/eclipse/mingw/mingw64/include/c++/13.2.0/bits/basic_string.h:39,
+                 from C:/Program Files/GIT/eclipse/mingw/mingw64/include/c++/13.2.0/string:54,
+                 from ..\myCode\Measurement.h:12,
+                 from ..\myCode\Temperature.h:11,
+                 from ..\myCode\Temperature.cpp:8:
+C:/Program Files/GIT/eclipse/mingw/mingw64/include/c++/13.2.0/bits/stl_construct.h: In instantiation of 'void std::_Construct(_Tp*, _Args&& ...) [with _Tp = Temperature; _Args = {Temperature*}]':
+C:/Program Files/GIT/eclipse/mingw/mingw64/include/c++/13.2.0/bits/alloc_traits.h:660:19:   required from 'static void std::allocator_traits<std::allocator<void> >::construct(allocator_type&, _Up*, _Args&& ...) [with _Up = Temperature; _Args = {Temperature*}; allocator_type = std::allocator<void>]'
+C:/Program Files/GIT/eclipse/mingw/mingw64/include/c++/13.2.0/bits/shared_ptr_base.h:604:39:   required from 'std::_Sp_counted_ptr_inplace<_Tp, _Alloc, _Lp>::_Sp_counted_ptr_inplace(_Alloc, _Args&& ...) [with _Args = {Temperature*}; _Tp = Temperature; _Alloc = std::allocator<void>; __gnu_cxx::_Lock_policy _Lp = __gnu_cxx::_S_atomic]'
+C:/Program Files/GIT/eclipse/mingw/mingw64/include/c++/13.2.0/bits/shared_ptr_base.h:971:16:   required from 'std::__shared_count<_Lp>::__shared_count(_Tp*&, std::_Sp_alloc_shared_tag<_Alloc>, _Args&& ...) [with _Tp = Temperature; _Alloc = std::allocator<void>; _Args = {Temperature*}; __gnu_cxx::_Lock_policy _Lp = __gnu_cxx::_S_atomic]'
+C:/Program Files/GIT/eclipse/mingw/mingw64/include/c++/13.2.0/bits/shared_ptr_base.h:1712:14:   required from 'std::__shared_ptr<_Tp, _Lp>::__shared_ptr(std::_Sp_alloc_shared_tag<_Tp>, _Args&& ...) [with _Alloc = std::allocator<void>; _Args = {Temperature*}; _Tp = Temperature; __gnu_cxx::_Lock_policy _Lp = __gnu_cxx::_S_atomic]'
+C:/Program Files/GIT/eclipse/mingw/mingw64/include/c++/13.2.0/bits/shared_ptr.h:464:59:   required from 'std::shared_ptr<_Tp>::shared_ptr(std::_Sp_alloc_shared_tag<_Tp>, _Args&& ...) [with _Alloc = std::allocator<void>; _Args = {Temperature*}; _Tp = Temperature]'
+C:/Program Files/GIT/eclipse/mingw/mingw64/include/c++/13.2.0/bits/shared_ptr.h:1009:14:   required from 'std::shared_ptr<typename std::enable_if<(! std::is_array< <template-parameter-1-1> >::value), _Tp>::type> std::make_shared(_Args&& ...) [with _Tp = Temperature; _Args = {Temperature*}; typename enable_if<(! is_array< <template-parameter-1-1> >::value), _Tp>::type = Temperature]'
+..\myCode\Temperature.cpp:36:33:   required from here
+C:/Program Files/GIT/eclipse/mingw/mingw64/include/c++/13.2.0/bits/stl_construct.h:119:7: error: invalid conversion from 'Temperature*' to 'uint16_t' {aka 'short unsigned int'} [-fpermissive]
+  119 |       ::new((void*)__p) _Tp(std::forward<_Args>(__args)...);
+      |       ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      |       |
+      |       Temperature*
+..\myCode\Temperature.cpp:12:35: note:   initializing argument 1 of 'Temperature::Temperature(uint16_t, float)'
+   12 | Temperature::Temperature(uint16_t timestamp, float temperature) : Measurement(timestamp), temperature(temperature)
+      |                          ~~~~~~~~~^~~~~~~~~
+00:35:45 **** Incremental Build of configuration Debug for project MeasurementDb ****
+Info: Internal Builder is used for build
+g++ -std=c++1y -O0 -g3 -Wall -c -fmessage-length=0 -Wall -Werror=return-type -o "myCode\\Humidity.o" "..\\myCode\\Humidity.cpp" 
+..\myCode\Humidity.cpp: In static member function 'static Humidity* Humidity::toType(Measurement*)':
+..\myCode\Humidity.cpp:51:24: error: invalid conversion from 'Measurement*' to 'Humidity*' [-fpermissive]
+   51 |                 return pBase;
+      |                        ^~~~~
+      |                        |
+      |                        Measurement*
+00:35:58 **** Incremental Build of configuration Debug for project MeasurementDb ****
+Info: Internal Builder is used for build
+g++ -std=c++1y -O0 -g3 -Wall -c -fmessage-length=0 -Wall -Werror=return-type -o "myCode\\Humidity.o" "..\\myCode\\Humidity.cpp" 
+..\myCode\Humidity.cpp: In static member function 'static Humidity* Humidity::toType(Measurement*)':
+..\myCode\Humidity.cpp:51:24: error: cannot convert 'Measurement' to 'Humidity*' in return
+   51 |                 return *pBase;
+      |                        ^~~~~~
+      |                        |
+      |                        Measurement
+00:36:05 **** Incremental Build of configuration Debug for project MeasurementDb ****
+Info: Internal Builder is used for build
+g++ -std=c++1y -O0 -g3 -Wall -c -fmessage-length=0 -Wall -Werror=return-type -o "myCode\\Temperature.o" "..\\myCode\\Temperature.cpp" 
+g++ -std=c++1y -O0 -g3 -Wall -c -fmessage-length=0 -Wall -Werror=return-type -o "myCode\\Humidity.o" "..\\myCode\\Humidity.cpp" 
+..\myCode\Humidity.cpp: In static member function 'static Humidity* Humidity::toType(Measurement*)':
+..\myCode\Humidity.cpp:51:24: error: cannot convert 'Measurement**' to 'Humidity*' in return
+   51 |                 return &pBase;
+      |                        ^~~~~~
+      |                        |
+      |                        Measurement**
+00:39:06 **** Incremental Build of configuration Debug for project MeasurementDb ****
+Info: Internal Builder is used for build
+g++ -std=c++1y -O0 -g3 -Wall -c -fmessage-length=0 -Wall -Werror=return-type -o "myCode\\Humidity.o" "..\\myCode\\Humidity.cpp" 
+..\myCode\Humidity.cpp: In static member function 'static Humidity* Humidity::toType(Measurement*)':
+..\myCode\Humidity.cpp:43:12: error: 'Temperature' was not declared in this scope
+   43 |         if(Temperature* pTemp = dynamic_cast<Temperature*>(ptr))
+      |            ^~~~~~~~~~~
+..\myCode\Humidity.cpp:43:25: error: 'pTemp' was not declared in this scope
+   43 |         if(Temperature* pTemp = dynamic_cast<Temperature*>(ptr))
+      |                         ^~~~~
+..\myCode\Humidity.cpp:43:46: error: 'Temperature' does not name a type
+   43 |         if(Temperature* pTemp = dynamic_cast<Temperature*>(ptr))
+      |                                              ^~~~~~~~~~~
+..\myCode\Humidity.cpp:43:57: error: expected '>' before '*' token
+   43 |         if(Temperature* pTemp = dynamic_cast<Temperature*>(ptr))
+      |                                                         ^
+..\myCode\Humidity.cpp:43:57: error: expected '(' before '*' token
+   43 |         if(Temperature* pTemp = dynamic_cast<Temperature*>(ptr))
+      |                                                         ^
+      |                                                         (
+..\myCode\Humidity.cpp:43:58: error: expected primary-expression before '>' token
+   43 |         if(Temperature* pTemp = dynamic_cast<Temperature*>(ptr))
+      |                                                          ^
+..\myCode\Humidity.cpp:43:65: error: expected ')' before '{' token
+   43 |         if(Temperature* pTemp = dynamic_cast<Temperature*>(ptr))
+      |           ~                                                     ^
+      |                                                                 )
+   44 |         {
+      |         ~                                                        
+..\myCode\Humidity.cpp:51:1: error: expected primary-expression before '}' token
+   51 | }
+      | ^
+..\myCode\Humidity.cpp:51:1: error: no return statement in function returning non-void [-Werror=return-type]
+cc1plus.exe: some warnings being treated as errors
+00:39:38 **** Incremental Build of configuration Debug for project MeasurementDb ****
+Info: Internal Builder is used for build
+g++ -std=c++1y -O0 -g3 -Wall -c -fmessage-length=0 -Wall -Werror=return-type -o "myCode\\Humidity.o" "..\\myCode\\Humidity.cpp" 
+g++ -o MeasurementDb.exe "myCode\\Humidity.o" "myCode\\Measurement.o" "myCode\\MeasurementDb.o" "myCode\\Temperature.o" "myCode\\main.o" 
+00:41:00 **** Incremental Build of configuration Debug for project MeasurementDb ****
+Info: Internal Builder is used for build
+g++ -std=c++1y -O0 -g3 -Wall -c -fmessage-length=0 -Wall -Werror=return-type -o "myCode\\Temperature.o" "..\\myCode\\Temperature.cpp" 
+g++ -std=c++1y -O0 -g3 -Wall -c -fmessage-length=0 -Wall -Werror=return-type -o "myCode\\Humidity.o" "..\\myCode\\Humidity.cpp" 
+g++ -o MeasurementDb.exe "myCode\\Humidity.o" "myCode\\Measurement.o" "myCode\\MeasurementDb.o" "myCode\\Temperature.o" "myCode\\main.o" 
+21:03:09 **** Incremental Build of configuration Debug for project MeasurementDb ****
+Info: Internal Builder is used for build
+g++ -std=c++1y -O0 -g3 -Wall -c -fmessage-length=0 -Wall -Werror=return-type -o "myCode\\Humidity.o" "..\\myCode\\Humidity.cpp" 
+g++ -std=c++1y -O0 -g3 -Wall -c -fmessage-length=0 -Wall -Werror=return-type -o "myCode\\main.o" "..\\myCode\\main.cpp" 
+g++ -std=c++1y -O0 -g3 -Wall -c -fmessage-length=0 -Wall -Werror=return-type -o "myCode\\Measurement.o" "..\\myCode\\Measurement.cpp" 
+g++ -std=c++1y -O0 -g3 -Wall -c -fmessage-length=0 -Wall -Werror=return-type -o "myCode\\Temperature.o" "..\\myCode\\Temperature.cpp" 
+g++ -std=c++1y -O0 -g3 -Wall -c -fmessage-length=0 -Wall -Werror=return-type -o "myCode\\MeasurementDb.o" "..\\myCode\\MeasurementDb.cpp" 
+g++ -o MeasurementDb.exe "myCode\\Humidity.o" "myCode\\Measurement.o" "myCode\\MeasurementDb.o" "myCode\\Temperature.o" "myCode\\main.o" 
+21:05:01 **** Incremental Build of configuration Debug for project MeasurementDb ****
+Info: Internal Builder is used for build
+g++ -std=c++1y -O0 -g3 -Wall -c -fmessage-length=0 -Wall -Werror=return-type -o "myCode\\main.o" "..\\myCode\\main.cpp" 
+g++ -o MeasurementDb.exe "myCode\\Humidity.o" "myCode\\Measurement.o" "myCode\\MeasurementDb.o" "myCode\\Temperature.o" "myCode\\main.o" 
+21:05:19 **** Incremental Build of configuration Debug for project MeasurementDb ****
+Info: Internal Builder is used for build
+g++ -std=c++1y -O0 -g3 -Wall -c -fmessage-length=0 -Wall -Werror=return-type -o "myCode\\MeasurementDb.o" "..\\myCode\\MeasurementDb.cpp" 
+g++ -o MeasurementDb.exe "myCode\\Humidity.o" "myCode\\Measurement.o" "myCode\\MeasurementDb.o" "myCode\\Temperature.o" "myCode\\main.o" 
+21:05:34 **** Incremental Build of configuration Debug for project MeasurementDb ****
+Info: Internal Builder is used for build
+g++ -std=c++1y -O0 -g3 -Wall -c -fmessage-length=0 -Wall -Werror=return-type -o "myCode\\MeasurementDb.o" "..\\myCode\\MeasurementDb.cpp" 
+g++ -o MeasurementDb.exe "myCode\\Humidity.o" "myCode\\Measurement.o" "myCode\\MeasurementDb.o" "myCode\\Temperature.o" "myCode\\main.o" 
+21:06:06 **** Incremental Build of configuration Debug for project MeasurementDb ****
+Info: Internal Builder is used for build
+g++ -std=c++1y -O0 -g3 -Wall -c -fmessage-length=0 -Wall -Werror=return-type -o "myCode\\MeasurementDb.o" "..\\myCode\\MeasurementDb.cpp" 
+g++ -o MeasurementDb.exe "myCode\\Humidity.o" "myCode\\Measurement.o" "myCode\\MeasurementDb.o" "myCode\\Temperature.o" "myCode\\main.o" 
+21:07:50 **** Incremental Build of configuration Debug for project MeasurementDb ****
+Info: Internal Builder is used for build
+g++ -std=c++1y -O0 -g3 -Wall -c -fmessage-length=0 -Wall -Werror=return-type -o "myCode\\MeasurementDb.o" "..\\myCode\\MeasurementDb.cpp" 
+..\myCode\MeasurementDb.cpp: In member function 'void MeasurementDb::load(std::istream&)':
+..\myCode\MeasurementDb.cpp:87:25: error: no match for 'operator*' (operand type is 'std::__cxx11::basic_string<char>')
+   87 |                 cout << *itr;
+      |                         ^~~~
+21:08:34 **** Incremental Build of configuration Debug for project MeasurementDb ****
+Info: Internal Builder is used for build
+g++ -std=c++1y -O0 -g3 -Wall -c -fmessage-length=0 -Wall -Werror=return-type -o "myCode\\MeasurementDb.o" "..\\myCode\\MeasurementDb.cpp" 
+g++ -o MeasurementDb.exe "myCode\\Humidity.o" "myCode\\Measurement.o" "myCode\\MeasurementDb.o" "myCode\\Temperature.o" "myCode\\main.o" 
+Info: Nothing to build for MeasurementDb
+23:30:44 **** Incremental Build of configuration Debug for project MeasurementDb ****
+Info: Internal Builder is used for build
+g++ -std=c++1y -O0 -g3 -Wall -c -fmessage-length=0 -Wall -Werror=return-type -o "myCode\\main.o" "..\\myCode\\main.cpp" 
+g++ -std=c++1y -O0 -g3 -Wall -c -fmessage-length=0 -Wall -Werror=return-type -o "myCode\\MeasurementDb.o" "..\\myCode\\MeasurementDb.cpp" 
+g++ -o MeasurementDb.exe "myCode\\Humidity.o" "myCode\\Measurement.o" "myCode\\MeasurementDb.o" "myCode\\Temperature.o" "myCode\\main.o" 
+23:31:23 **** Incremental Build of configuration Debug for project MeasurementDb ****
+Info: Internal Builder is used for build
+g++ -std=c++1y -O0 -g3 -Wall -c -fmessage-length=0 -Wall -Werror=return-type -o "myCode\\MeasurementDb.o" "..\\myCode\\MeasurementDb.cpp" 
+g++ -o MeasurementDb.exe "myCode\\Humidity.o" "myCode\\Measurement.o" "myCode\\MeasurementDb.o" "myCode\\Temperature.o" "myCode\\main.o" 
+23:32:00 **** Incremental Build of configuration Debug for project MeasurementDb ****
+Info: Internal Builder is used for build
+g++ -std=c++1y -O0 -g3 -Wall -c -fmessage-length=0 -Wall -Werror=return-type -o "myCode\\MeasurementDb.o" "..\\myCode\\MeasurementDb.cpp" 
+g++ -o MeasurementDb.exe "myCode\\Humidity.o" "myCode\\Measurement.o" "myCode\\MeasurementDb.o" "myCode\\Temperature.o" "myCode\\main.o" 
+23:34:48 **** Incremental Build of configuration Debug for project MeasurementDb ****
+Info: Internal Builder is used for build
+g++ -std=c++1y -O0 -g3 -Wall -c -fmessage-length=0 -Wall -Werror=return-type -o "myCode\\MeasurementDb.o" "..\\myCode\\MeasurementDb.cpp" 
+..\myCode\MeasurementDb.cpp: In member function 'void MeasurementDb::load(std::istream&)':
+..\myCode\MeasurementDb.cpp:78:18: warning: unused variable 'timestamp' [-Wunused-variable]
+   78 |         uint16_t timestamp;
+      |                  ^~~~~~~~~
+g++ -o MeasurementDb.exe "myCode\\Humidity.o" "myCode\\Measurement.o" "myCode\\MeasurementDb.o" "myCode\\Temperature.o" "myCode\\main.o" 
+23:35:24 **** Incremental Build of configuration Debug for project MeasurementDb ****
+Info: Internal Builder is used for build
+g++ -std=c++1y -O0 -g3 -Wall -c -fmessage-length=0 -Wall -Werror=return-type -o "myCode\\MeasurementDb.o" "..\\myCode\\MeasurementDb.cpp" 
+..\myCode\MeasurementDb.cpp: In member function 'void MeasurementDb::load(std::istream&)':
+..\myCode\MeasurementDb.cpp:78:18: warning: unused variable 'timestamp' [-Wunused-variable]
+   78 |         uint16_t timestamp;
+      |                  ^~~~~~~~~
+g++ -o MeasurementDb.exe "myCode\\Humidity.o" "myCode\\Measurement.o" "myCode\\MeasurementDb.o" "myCode\\Temperature.o" "myCode\\main.o" 
+23:35:42 **** Incremental Build of configuration Debug for project MeasurementDb ****
+Info: Internal Builder is used for build
+g++ -std=c++1y -O0 -g3 -Wall -c -fmessage-length=0 -Wall -Werror=return-type -o "myCode\\MeasurementDb.o" "..\\myCode\\MeasurementDb.cpp" 
+..\myCode\MeasurementDb.cpp: In member function 'void MeasurementDb::load(std::istream&)':
+..\myCode\MeasurementDb.cpp:78:18: warning: unused variable 'timestamp' [-Wunused-variable]
+   78 |         uint16_t timestamp;
+      |                  ^~~~~~~~~
+g++ -o MeasurementDb.exe "myCode\\Humidity.o" "myCode\\Measurement.o" "myCode\\MeasurementDb.o" "myCode\\Temperature.o" "myCode\\main.o" 
+23:35:50 **** Incremental Build of configuration Debug for project MeasurementDb ****
+Info: Internal Builder is used for build
+g++ -std=c++1y -O0 -g3 -Wall -c -fmessage-length=0 -Wall -Werror=return-type -o "myCode\\MeasurementDb.o" "..\\myCode\\MeasurementDb.cpp" 
+..\myCode\MeasurementDb.cpp: In member function 'void MeasurementDb::load(std::istream&)':
+..\myCode\MeasurementDb.cpp:78:18: warning: unused variable 'timestamp' [-Wunused-variable]
+   78 |         uint16_t timestamp;
+      |                  ^~~~~~~~~
+g++ -o MeasurementDb.exe "myCode\\Humidity.o" "myCode\\Measurement.o" "myCode\\MeasurementDb.o" "myCode\\Temperature.o" "myCode\\main.o" 
+23:39:49 **** Incremental Build of configuration Debug for project MeasurementDb ****
+Info: Internal Builder is used for build
+g++ -std=c++1y -O0 -g3 -Wall -c -fmessage-length=0 -Wall -Werror=return-type -o "myCode\\MeasurementDb.o" "..\\myCode\\MeasurementDb.cpp" 
+..\myCode\MeasurementDb.cpp: In member function 'void MeasurementDb::load(std::istream&)':
+..\myCode\MeasurementDb.cpp:96:28: error: 'Humidity' was not declared in this scope
+   96 |                 shared_ptr<Humidity> humid = Humidity::fromString(timestamp, (remainder));
+      |                            ^~~~~~~~
+..\myCode\MeasurementDb.cpp:96:36: error: template argument 1 is invalid
+   96 |                 shared_ptr<Humidity> humid = Humidity::fromString(timestamp, (remainder));
+      |                                    ^
+..\myCode\MeasurementDb.cpp:96:46: error: 'Humidity' is not a class, namespace, or enumeration
+   96 |                 shared_ptr<Humidity> humid = Humidity::fromString(timestamp, (remainder));
+      |                                              ^~~~~~~~
+..\myCode\MeasurementDb.cpp:96:38: warning: unused variable 'humid' [-Wunused-variable]
+   96 |                 shared_ptr<Humidity> humid = Humidity::fromString(timestamp, (remainder));
+      |                                      ^~~~~
+23:40:28 **** Incremental Build of configuration Debug for project MeasurementDb ****
+Info: Internal Builder is used for build
+g++ -std=c++1y -O0 -g3 -Wall -c -fmessage-length=0 -Wall -Werror=return-type -o "myCode\\MeasurementDb.o" "..\\myCode\\MeasurementDb.cpp" 
+g++ -std=c++1y -O0 -g3 -Wall -c -fmessage-length=0 -Wall -Werror=return-type -o "myCode\\main.o" "..\\myCode\\main.cpp" 
+g++ -o MeasurementDb.exe "myCode\\Humidity.o" "myCode\\Measurement.o" "myCode\\MeasurementDb.o" "myCode\\Temperature.o" "myCode\\main.o" 
+23:50:04 **** Incremental Build of configuration Debug for project MeasurementDb ****
+Info: Internal Builder is used for build
+g++ -std=c++1y -O0 -g3 -Wall -c -fmessage-length=0 -Wall -Werror=return-type -o "myCode\\main.o" "..\\myCode\\main.cpp" 
+g++ -std=c++1y -O0 -g3 -Wall -c -fmessage-length=0 -Wall -Werror=return-type -o "myCode\\MeasurementDb.o" "..\\myCode\\MeasurementDb.cpp" 
+g++ -o MeasurementDb.exe "myCode\\Humidity.o" "myCode\\Measurement.o" "myCode\\MeasurementDb.o" "myCode\\Temperature.o" "myCode\\main.o" 
+23:50:16 **** Incremental Build of configuration Debug for project MeasurementDb ****
+Info: Internal Builder is used for build
+g++ -std=c++1y -O0 -g3 -Wall -c -fmessage-length=0 -Wall -Werror=return-type -o "myCode\\main.o" "..\\myCode\\main.cpp" 
+g++ -o MeasurementDb.exe "myCode\\Humidity.o" "myCode\\Measurement.o" "myCode\\MeasurementDb.o" "myCode\\Temperature.o" "myCode\\main.o" 
+23:53:22 **** Incremental Build of configuration Debug for project MeasurementDb ****
+Info: Internal Builder is used for build
+g++ -std=c++1y -O0 -g3 -Wall -c -fmessage-length=0 -Wall -Werror=return-type -o "myCode\\main.o" "..\\myCode\\main.cpp" 
+g++ -std=c++1y -O0 -g3 -Wall -c -fmessage-length=0 -Wall -Werror=return-type -o "myCode\\MeasurementDb.o" "..\\myCode\\MeasurementDb.cpp" 
+g++ -o MeasurementDb.exe "myCode\\Humidity.o" "myCode\\Measurement.o" "myCode\\MeasurementDb.o" "myCode\\Temperature.o" "myCode\\main.o" 
+23:54:49 **** Incremental Build of configuration Debug for project MeasurementDb ****
+Info: Internal Builder is used for build
+g++ -std=c++1y -O0 -g3 -Wall -c -fmessage-length=0 -Wall -Werror=return-type -o "myCode\\MeasurementDb.o" "..\\myCode\\MeasurementDb.cpp" 
+g++ -std=c++1y -O0 -g3 -Wall -c -fmessage-length=0 -Wall -Werror=return-type -o "myCode\\main.o" "..\\myCode\\main.cpp" 
+g++ -o MeasurementDb.exe "myCode\\Humidity.o" "myCode\\Measurement.o" "myCode\\MeasurementDb.o" "myCode\\Temperature.o" "myCode\\main.o" 
+23:56:01 **** Incremental Build of configuration Debug for project MeasurementDb ****
+Info: Internal Builder is used for build
+g++ -std=c++1y -O0 -g3 -Wall -c -fmessage-length=0 -Wall -Werror=return-type -o "myCode\\MeasurementDb.o" "..\\myCode\\MeasurementDb.cpp" 
+g++ -o MeasurementDb.exe "myCode\\Humidity.o" "myCode\\Measurement.o" "myCode\\MeasurementDb.o" "myCode\\Temperature.o" "myCode\\main.o" 
+23:56:38 **** Incremental Build of configuration Debug for project MeasurementDb ****
+Info: Internal Builder is used for build
+g++ -std=c++1y -O0 -g3 -Wall -c -fmessage-length=0 -Wall -Werror=return-type -o "myCode\\MeasurementDb.o" "..\\myCode\\MeasurementDb.cpp" 
+g++ -o MeasurementDb.exe "myCode\\Humidity.o" "myCode\\Measurement.o" "myCode\\MeasurementDb.o" "myCode\\Temperature.o" "myCode\\main.o" 
+23:57:11 **** Incremental Build of configuration Debug for project MeasurementDb ****
+Info: Internal Builder is used for build
+g++ -std=c++1y -O0 -g3 -Wall -c -fmessage-length=0 -Wall -Werror=return-type -o "myCode\\MeasurementDb.o" "..\\myCode\\MeasurementDb.cpp" 
+g++ -o MeasurementDb.exe "myCode\\Humidity.o" "myCode\\Measurement.o" "myCode\\MeasurementDb.o" "myCode\\Temperature.o" "myCode\\main.o" 
+23:57:57 **** Incremental Build of configuration Debug for project MeasurementDb ****
+Info: Internal Builder is used for build
+g++ -std=c++1y -O0 -g3 -Wall -c -fmessage-length=0 -Wall -Werror=return-type -o "myCode\\MeasurementDb.o" "..\\myCode\\MeasurementDb.cpp" 
+g++ -o MeasurementDb.exe "myCode\\Humidity.o" "myCode\\Measurement.o" "myCode\\MeasurementDb.o" "myCode\\Temperature.o" "myCode\\main.o" 
+23:58:58 **** Incremental Build of configuration Debug for project MeasurementDb ****
+Info: Internal Builder is used for build
+g++ -std=c++1y -O0 -g3 -Wall -c -fmessage-length=0 -Wall -Werror=return-type -o "myCode\\MeasurementDb.o" "..\\myCode\\MeasurementDb.cpp" 
+g++ -o MeasurementDb.exe "myCode\\Humidity.o" "myCode\\Measurement.o" "myCode\\MeasurementDb.o" "myCode\\Temperature.o" "myCode\\main.o" 
+00:00:08 **** Incremental Build of configuration Debug for project MeasurementDb ****
+Info: Internal Builder is used for build
+g++ -std=c++1y -O0 -g3 -Wall -c -fmessage-length=0 -Wall -Werror=return-type -o "myCode\\MeasurementDb.o" "..\\myCode\\MeasurementDb.cpp" 
+g++ -o MeasurementDb.exe "myCode\\Humidity.o" "myCode\\Measurement.o" "myCode\\MeasurementDb.o" "myCode\\Temperature.o" "myCode\\main.o" 
+00:02:21 **** Incremental Build of configuration Debug for project MeasurementDb ****
+Info: Internal Builder is used for build
+g++ -std=c++1y -O0 -g3 -Wall -c -fmessage-length=0 -Wall -Werror=return-type -o "myCode\\MeasurementDb.o" "..\\myCode\\MeasurementDb.cpp" 
+g++ -o MeasurementDb.exe "myCode\\Humidity.o" "myCode\\Measurement.o" "myCode\\MeasurementDb.o" "myCode\\Temperature.o" "myCode\\main.o" 
+00:05:49 **** Incremental Build of configuration Debug for project MeasurementDb ****
+Info: Internal Builder is used for build
+g++ -std=c++1y -O0 -g3 -Wall -c -fmessage-length=0 -Wall -Werror=return-type -o "myCode\\MeasurementDb.o" "..\\myCode\\MeasurementDb.cpp" 
+g++ -o MeasurementDb.exe "myCode\\Humidity.o" "myCode\\Measurement.o" "myCode\\MeasurementDb.o" "myCode\\Temperature.o" "myCode\\main.o" 
+00:06:22 **** Incremental Build of configuration Debug for project MeasurementDb ****
+Info: Internal Builder is used for build
+g++ -std=c++1y -O0 -g3 -Wall -c -fmessage-length=0 -Wall -Werror=return-type -o "myCode\\MeasurementDb.o" "..\\myCode\\MeasurementDb.cpp" 
+g++ -o MeasurementDb.exe "myCode\\Humidity.o" "myCode\\Measurement.o" "myCode\\MeasurementDb.o" "myCode\\Temperature.o" "myCode\\main.o" 
+00:09:34 **** Incremental Build of configuration Debug for project MeasurementDb ****
+Info: Internal Builder is used for build
+g++ -std=c++1y -O0 -g3 -Wall -c -fmessage-length=0 -Wall -Werror=return-type -o "myCode\\MeasurementDb.o" "..\\myCode\\MeasurementDb.cpp" 
+g++ -std=c++1y -O0 -g3 -Wall -c -fmessage-length=0 -Wall -Werror=return-type -o "myCode\\main.o" "..\\myCode\\main.cpp" 
+g++ -o MeasurementDb.exe "myCode\\Humidity.o" "myCode\\Measurement.o" "myCode\\MeasurementDb.o" "myCode\\Temperature.o" "myCode\\main.o" 
+09:09:17 **** Incremental Build of configuration Debug for project MeasurementDb ****
+Info: Internal Builder is used for build
+g++ -std=c++1y -O0 -g3 -Wall -c -fmessage-length=0 -Wall -Werror=return-type -o "myCode\\MeasurementDb.o" "..\\myCode\\MeasurementDb.cpp" 
+..\myCode\MeasurementDb.cpp: In member function 'bool MeasurementDb::maximumTemperature(std::string&, std::shared_ptr<Measurement>&)':
+..\myCode\MeasurementDb.cpp:109:39: error: no match for 'operator==' (operand types are 'const std::__cxx11::basic_string<char>' and 'std::map<std::__cxx11::basic_string<char>, std::vector<std::shared_ptr<Measurement> > >::iterator' {aka 'std::_Rb_tree<std::__cxx11::basic_string<char>, std::pair<const std::__cxx11::basic_string<char>, std::vector<std::shared_ptr<Measurement> > >, std::_Select1st<std::pair<const std::__cxx11::basic_string<char>, std::vector<std::shared_ptr<Measurement> > > >, std::less<std::__cxx11::basic_string<char> >, std::allocator<std::pair<const std::__cxx11::basic_string<char>, std::vector<std::shared_ptr<Measurement> > > > >::iterator'})
+  109 |                         if(pair.first == this->data.find(location))
+      |                            ~~~~~~~~~~ ^~ ~~~~~~~~~~~~~~~~~~~~~~~~~
+      |                                 |                       |
+      |                                 |                       std::map<std::__cxx11::basic_string<char>, std::vector<std::shared_ptr<Measurement> > >::iterator {aka std::_Rb_tree<std::__cxx11::basic_string<char>, std::pair<const std::__cxx11::basic_string<char>, std::vector<std::shared_ptr<Measurement> > >, std::_Select1st<std::pair<const std::__cxx11::basic_string<char>, std::vector<std::shared_ptr<Measurement> > > >, std::less<std::__cxx11::basic_string<char> >, std::allocator<std::pair<const std::__cxx11::basic_string<char>, std::vector<std::shared_ptr<Measurement> > > > >::iterator}
+      |                                 const std::__cxx11::basic_string<char>
+In file included from C:/Program Files/GIT/eclipse/mingw/mingw64/include/c++/13.2.0/bits/char_traits.h:42,
+                 from C:/Program Files/GIT/eclipse/mingw/mingw64/include/c++/13.2.0/string:42,
+                 from ..\myCode\Measurement.h:12,
+                 from ..\myCode\MeasurementDb.h:11,
+                 from ..\myCode\MeasurementDb.cpp:8:
+C:/Program Files/GIT/eclipse/mingw/mingw64/include/c++/13.2.0/bits/postypes.h:192:5: note: candidate: 'template<class _StateT> bool std::operator==(const fpos<_StateT>&, const fpos<_StateT>&)'
+  192 |     operator==(const fpos<_StateT>& __lhs, const fpos<_StateT>& __rhs)
+      |     ^~~~~~~~
+C:/Program Files/GIT/eclipse/mingw/mingw64/include/c++/13.2.0/bits/postypes.h:192:5: note:   template argument deduction/substitution failed:
+..\myCode\MeasurementDb.cpp:109:66: note:   'const std::__cxx11::basic_string<char>' is not derived from 'const std::fpos<_StateT>'
+  109 |                         if(pair.first == this->data.find(location))
+      |                                                                  ^
+In file included from C:/Program Files/GIT/eclipse/mingw/mingw64/include/c++/13.2.0/string:43:
+C:/Program Files/GIT/eclipse/mingw/mingw64/include/c++/13.2.0/bits/allocator.h:237:5: note: candidate: 'template<class _T1, class _T2> bool std::operator==(const allocator<_CharT>&, const allocator<_T2>&)'
+  237 |     operator==(const allocator<_T1>&, const allocator<_T2>&)
+      |     ^~~~~~~~
+C:/Program Files/GIT/eclipse/mingw/mingw64/include/c++/13.2.0/bits/allocator.h:237:5: note:   template argument deduction/substitution failed:
+..\myCode\MeasurementDb.cpp:109:66: note:   'const std::__cxx11::basic_string<char>' is not derived from 'const std::allocator<_CharT>'
+  109 |                         if(pair.first == this->data.find(location))
+      |                                                                  ^
+In file included from C:/Program Files/GIT/eclipse/mingw/mingw64/include/c++/13.2.0/string:48:
+C:/Program Files/GIT/eclipse/mingw/mingw64/include/c++/13.2.0/bits/stl_iterator.h:448:5: note: candidate: 'template<class _Iterator> bool std::operator==(const reverse_iterator<_Iterator>&, const reverse_iterator<_Iterator>&)'
+  448 |     operator==(const reverse_iterator<_Iterator>& __x,
+      |     ^~~~~~~~
+C:/Program Files/GIT/eclipse/mingw/mingw64/include/c++/13.2.0/bits/stl_iterator.h:448:5: note:   template argument deduction/substitution failed:
+..\myCode\MeasurementDb.cpp:109:66: note:   'const std::__cxx11::basic_string<char>' is not derived from 'const std::reverse_iterator<_Iterator>'
+  109 |                         if(pair.first == this->data.find(location))
+      |                                                                  ^
+C:/Program Files/GIT/eclipse/mingw/mingw64/include/c++/13.2.0/bits/stl_iterator.h:493:5: note: candidate: 'template<class _IteratorL, class _IteratorR> bool std::operator==(const reverse_iterator<_Iterator>&, const reverse_iterator<_IteratorR>&)'
+  493 |     operator==(const reverse_iterator<_IteratorL>& __x,
+      |     ^~~~~~~~
+C:/Program Files/GIT/eclipse/mingw/mingw64/include/c++/13.2.0/bits/stl_iterator.h:493:5: note:   template argument deduction/substitution failed:
+..\myCode\MeasurementDb.cpp:109:66: note:   'const std::__cxx11::basic_string<char>' is not derived from 'const std::reverse_iterator<_Iterator>'
+  109 |                         if(pair.first == this->data.find(location))
+      |                                                                  ^
+C:/Program Files/GIT/eclipse/mingw/mingw64/include/c++/13.2.0/bits/stl_iterator.h:1678:5: note: candidate: 'template<class _IteratorL, class _IteratorR> bool std::operator==(const move_iterator<_IteratorL>&, const move_iterator<_IteratorR>&)'
+ 1678 |     operator==(const move_iterator<_IteratorL>& __x,
+      |     ^~~~~~~~
+C:/Program Files/GIT/eclipse/mingw/mingw64/include/c++/13.2.0/bits/stl_iterator.h:1678:5: note:   template argument deduction/substitution failed:
+..\myCode\MeasurementDb.cpp:109:66: note:   'const std::__cxx11::basic_string<char>' is not derived from 'const std::move_iterator<_IteratorL>'
+  109 |                         if(pair.first == this->data.find(location))
+      |                                                                  ^
+C:/Program Files/GIT/eclipse/mingw/mingw64/include/c++/13.2.0/bits/stl_iterator.h:1748:5: note: candidate: 'template<class _Iterator> bool std::operator==(const move_iterator<_IteratorL>&, const move_iterator<_IteratorL>&)'
+ 1748 |     operator==(const move_iterator<_Iterator>& __x,
+      |     ^~~~~~~~
+C:/Program Files/GIT/eclipse/mingw/mingw64/include/c++/13.2.0/bits/stl_iterator.h:1748:5: note:   template argument deduction/substitution failed:
+..\myCode\MeasurementDb.cpp:109:66: note:   'const std::__cxx11::basic_string<char>' is not derived from 'const std::move_iterator<_IteratorL>'
+  109 |                         if(pair.first == this->data.find(location))
+      |                                                                  ^
+In file included from C:/Program Files/GIT/eclipse/mingw/mingw64/include/c++/13.2.0/bits/stl_algobase.h:64,
+                 from C:/Program Files/GIT/eclipse/mingw/mingw64/include/c++/13.2.0/string:51:
+C:/Program Files/GIT/eclipse/mingw/mingw64/include/c++/13.2.0/bits/stl_pair.h:812:5: note: candidate: 'template<class _T1, class _T2> constexpr bool std::operator==(const pair<_T1, _T2>&, const pair<_T1, _T2>&)'
+  812 |     operator==(const pair<_T1, _T2>& __x, const pair<_T1, _T2>& __y)
+      |     ^~~~~~~~
+C:/Program Files/GIT/eclipse/mingw/mingw64/include/c++/13.2.0/bits/stl_pair.h:812:5: note:   template argument deduction/substitution failed:
+..\myCode\MeasurementDb.cpp:109:66: note:   'const std::__cxx11::basic_string<char>' is not derived from 'const std::pair<_T1, _T2>'
+  109 |                         if(pair.first == this->data.find(location))
+      |                                                                  ^
+In file included from C:/Program Files/GIT/eclipse/mingw/mingw64/include/c++/13.2.0/string:54:
+C:/Program Files/GIT/eclipse/mingw/mingw64/include/c++/13.2.0/bits/basic_string.h:3698:5: note: candidate: 'template<class _CharT, class _Traits, class _Alloc> bool std::operator==(const __cxx11::basic_string<_CharT, _Traits, _Alloc>&, const __cxx11::basic_string<_CharT, _Traits, _Alloc>&)'
+ 3698 |     operator==(const basic_string<_CharT, _Traits, _Alloc>& __lhs,
+      |     ^~~~~~~~
+C:/Program Files/GIT/eclipse/mingw/mingw64/include/c++/13.2.0/bits/basic_string.h:3698:5: note:   template argument deduction/substitution failed:
+..\myCode\MeasurementDb.cpp:109:66: note:   'std::map<std::__cxx11::basic_string<char>, std::vector<std::shared_ptr<Measurement> > >::iterator' {aka 'std::_Rb_tree<std::__cxx11::basic_string<char>, std::pair<const std::__cxx11::basic_string<char>, std::vector<std::shared_ptr<Measurement> > >, std::_Select1st<std::pair<const std::__cxx11::basic_string<char>, std::vector<std::shared_ptr<Measurement> > > >, std::less<std::__cxx11::basic_string<char> >, std::allocator<std::pair<const std::__cxx11::basic_string<char>, std::vector<std::shared_ptr<Measurement> > > > >::iterator'} is not derived from 'const std::__cxx11::basic_string<_CharT, _Traits, _Alloc>'
+  109 |                         if(pair.first == this->data.find(location))
+      |                                                                  ^
+C:/Program Files/GIT/eclipse/mingw/mingw64/include/c++/13.2.0/bits/basic_string.h:3715:5: note: candidate: 'template<class _CharT, class _Traits, class _Alloc> bool std::operator==(const __cxx11::basic_string<_CharT, _Traits, _Alloc>&, const _CharT*)'
+ 3715 |     operator==(const basic_string<_CharT, _Traits, _Alloc>& __lhs,
+      |     ^~~~~~~~
+C:/Program Files/GIT/eclipse/mingw/mingw64/include/c++/13.2.0/bits/basic_string.h:3715:5: note:   template argument deduction/substitution failed:
+..\myCode\MeasurementDb.cpp:109:66: note:   mismatched types 'const _CharT*' and 'std::_Rb_tree_iterator<std::pair<const std::__cxx11::basic_string<char>, std::vector<std::shared_ptr<Measurement> > > >'
+  109 |                         if(pair.first == this->data.find(location))
+      |                                                                  ^
+C:/Program Files/GIT/eclipse/mingw/mingw64/include/c++/13.2.0/bits/basic_string.h:3762:5: note: candidate: 'template<class _CharT, class _Traits, class _Alloc> bool std::operator==(const _CharT*, const __cxx11::basic_string<_CharT, _Traits, _Alloc>&)'
+ 3762 |     operator==(const _CharT* __lhs,
+      |     ^~~~~~~~
+C:/Program Files/GIT/eclipse/mingw/mingw64/include/c++/13.2.0/bits/basic_string.h:3762:5: note:   template argument deduction/substitution failed:
+..\myCode\MeasurementDb.cpp:109:66: note:   mismatched types 'const _CharT*' and 'std::__cxx11::basic_string<char>'
+  109 |                         if(pair.first == this->data.find(location))
+      |                                                                  ^
+In file included from C:/Program Files/GIT/eclipse/mingw/mingw64/include/c++/13.2.0/bits/locale_facets.h:48,
+                 from C:/Program Files/GIT/eclipse/mingw/mingw64/include/c++/13.2.0/bits/basic_ios.h:37,
+                 from C:/Program Files/GIT/eclipse/mingw/mingw64/include/c++/13.2.0/ios:46,
+                 from C:/Program Files/GIT/eclipse/mingw/mingw64/include/c++/13.2.0/ostream:40,
+                 from C:/Program Files/GIT/eclipse/mingw/mingw64/include/c++/13.2.0/iostream:41,
+                 from ..\myCode\Measurement.h:13:
+C:/Program Files/GIT/eclipse/mingw/mingw64/include/c++/13.2.0/bits/streambuf_iterator.h:234:5: note: candidate: 'template<class _CharT, class _Traits> bool std::operator==(const istreambuf_iterator<_CharT, _Traits>&, const istreambuf_iterator<_CharT, _Traits>&)'
+  234 |     operator==(const istreambuf_iterator<_CharT, _Traits>& __a,
+      |     ^~~~~~~~
+C:/Program Files/GIT/eclipse/mingw/mingw64/include/c++/13.2.0/bits/streambuf_iterator.h:234:5: note:   template argument deduction/substitution failed:
+..\myCode\MeasurementDb.cpp:109:66: note:   'const std::__cxx11::basic_string<char>' is not derived from 'const std::istreambuf_iterator<_CharT, _Traits>'
+  109 |                         if(pair.first == this->data.find(location))
+      |                                                                  ^
+In file included from C:/Program Files/GIT/eclipse/mingw/mingw64/include/c++/13.2.0/bits/unique_ptr.h:36,
+                 from C:/Program Files/GIT/eclipse/mingw/mingw64/include/c++/13.2.0/memory:78,
+                 from ..\myCode\Measurement.h:16:
+C:/Program Files/GIT/eclipse/mingw/mingw64/include/c++/13.2.0/tuple:1905:5: note: candidate: 'template<class ... _TElements, class ... _UElements> constexpr bool std::operator==(const tuple<_Elements ...>&, const tuple<_Types ...>&)'
+ 1905 |     operator==(const tuple<_TElements...>& __t,
+      |     ^~~~~~~~
+C:/Program Files/GIT/eclipse/mingw/mingw64/include/c++/13.2.0/tuple:1905:5: note:   template argument deduction/substitution failed:
+..\myCode\MeasurementDb.cpp:109:66: note:   'const std::__cxx11::basic_string<char>' is not derived from 'const std::tuple<_Elements ...>'
+  109 |                         if(pair.first == this->data.find(location))
+      |                                                                  ^
+C:/Program Files/GIT/eclipse/mingw/mingw64/include/c++/13.2.0/bits/unique_ptr.h:829:5: note: candidate: 'template<class _Tp, class _Dp, class _Up, class _Ep> bool std::operator==(const unique_ptr<_Tp, _Dp>&, const unique_ptr<_Up, _Ep>&)'
+  829 |     operator==(const unique_ptr<_Tp, _Dp>& __x,
+      |     ^~~~~~~~
+C:/Program Files/GIT/eclipse/mingw/mingw64/include/c++/13.2.0/bits/unique_ptr.h:829:5: note:   template argument deduction/substitution failed:
+..\myCode\MeasurementDb.cpp:109:66: note:   'const std::__cxx11::basic_string<char>' is not derived from 'const std::unique_ptr<_Tp, _Dp>'
+  109 |                         if(pair.first == this->data.find(location))
+      |                                                                  ^
+C:/Program Files/GIT/eclipse/mingw/mingw64/include/c++/13.2.0/bits/unique_ptr.h:837:5: note: candidate: 'template<class _Tp, class _Dp> bool std::operator==(const unique_ptr<_Tp, _Dp>&, nullptr_t)'
+  837 |     operator==(const unique_ptr<_Tp, _Dp>& __x, nullptr_t) noexcept
+      |     ^~~~~~~~
+C:/Program Files/GIT/eclipse/mingw/mingw64/include/c++/13.2.0/bits/unique_ptr.h:837:5: note:   template argument deduction/substitution failed:
+..\myCode\MeasurementDb.cpp:109:66: note:   'const std::__cxx11::basic_string<char>' is not derived from 'const std::unique_ptr<_Tp, _Dp>'
+  109 |                         if(pair.first == this->data.find(location))
+      |                                                                  ^
+C:/Program Files/GIT/eclipse/mingw/mingw64/include/c++/13.2.0/bits/unique_ptr.h:845:5: note: candidate: 'template<class _Tp, class _Dp> bool std::operator==(nullptr_t, const unique_ptr<_Tp, _Dp>&)'
+  845 |     operator==(nullptr_t, const unique_ptr<_Tp, _Dp>& __x) noexcept
+      |     ^~~~~~~~
+C:/Program Files/GIT/eclipse/mingw/mingw64/include/c++/13.2.0/bits/unique_ptr.h:845:5: note:   template argument deduction/substitution failed:
+..\myCode\MeasurementDb.cpp:109:66: note:   'std::map<std::__cxx11::basic_string<char>, std::vector<std::shared_ptr<Measurement> > >::iterator' {aka 'std::_Rb_tree<std::__cxx11::basic_string<char>, std::pair<const std::__cxx11::basic_string<char>, std::vector<std::shared_ptr<Measurement> > >, std::_Select1st<std::pair<const std::__cxx11::basic_string<char>, std::vector<std::shared_ptr<Measurement> > > >, std::less<std::__cxx11::basic_string<char> >, std::allocator<std::pair<const std::__cxx11::basic_string<char>, std::vector<std::shared_ptr<Measurement> > > > >::iterator'} is not derived from 'const std::unique_ptr<_Tp, _Dp>'
+  109 |                         if(pair.first == this->data.find(location))
+      |                                                                  ^
+In file included from C:/Program Files/GIT/eclipse/mingw/mingw64/include/c++/13.2.0/bits/shared_ptr.h:53,
+                 from C:/Program Files/GIT/eclipse/mingw/mingw64/include/c++/13.2.0/memory:80:
+C:/Program Files/GIT/eclipse/mingw/mingw64/include/c++/13.2.0/bits/shared_ptr_base.h:1793:5: note: candidate: 'template<class _Tp1, class _Tp2, __gnu_cxx::_Lock_policy _Lp> bool std::operator==(const __shared_ptr<_Tp1, _Lp>&, const __shared_ptr<_Tp2, _Lp>&)'
+ 1793 |     operator==(const __shared_ptr<_Tp1, _Lp>& __a,
+      |     ^~~~~~~~
+C:/Program Files/GIT/eclipse/mingw/mingw64/include/c++/13.2.0/bits/shared_ptr_base.h:1793:5: note:   template argument deduction/substitution failed:
+..\myCode\MeasurementDb.cpp:109:66: note:   'const std::__cxx11::basic_string<char>' is not derived from 'const std::__shared_ptr<_Tp1, _Lp>'
+  109 |                         if(pair.first == this->data.find(location))
+      |                                                                  ^
+C:/Program Files/GIT/eclipse/mingw/mingw64/include/c++/13.2.0/bits/shared_ptr_base.h:1799:5: note: candidate: 'template<class _Tp, __gnu_cxx::_Lock_policy _Lp> bool std::operator==(const __shared_ptr<_Tp, _Lp>&, nullptr_t)'
+ 1799 |     operator==(const __shared_ptr<_Tp, _Lp>& __a, nullptr_t) noexcept
+      |     ^~~~~~~~
+C:/Program Files/GIT/eclipse/mingw/mingw64/include/c++/13.2.0/bits/shared_ptr_base.h:1799:5: note:   template argument deduction/substitution failed:
+..\myCode\MeasurementDb.cpp:109:66: note:   'const std::__cxx11::basic_string<char>' is not derived from 'const std::__shared_ptr<_Tp, _Lp>'
+  109 |                         if(pair.first == this->data.find(location))
+      |                                                                  ^
+C:/Program Files/GIT/eclipse/mingw/mingw64/include/c++/13.2.0/bits/shared_ptr_base.h:1819:5: note: candidate: 'template<class _Tp, __gnu_cxx::_Lock_policy _Lp> bool std::operator==(nullptr_t, const __shared_ptr<_Tp, _Lp>&)'
+ 1819 |     operator==(nullptr_t, const __shared_ptr<_Tp, _Lp>& __a) noexcept
+      |     ^~~~~~~~
+C:/Program Files/GIT/eclipse/mingw/mingw64/include/c++/13.2.0/bits/shared_ptr_base.h:1819:5: note:   template argument deduction/substitution failed:
+..\myCode\MeasurementDb.cpp:109:66: note:   'std::map<std::__cxx11::basic_string<char>, std::vector<std::shared_ptr<Measurement> > >::iterator' {aka 'std::_Rb_tree<std::__cxx11::basic_string<char>, std::pair<const std::__cxx11::basic_string<char>, std::vector<std::shared_ptr<Measurement> > >, std::_Select1st<std::pair<const std::__cxx11::basic_string<char>, std::vector<std::shared_ptr<Measurement> > > >, std::less<std::__cxx11::basic_string<char> >, std::allocator<std::pair<const std::__cxx11::basic_string<char>, std::vector<std::shared_ptr<Measurement> > > > >::iterator'} is not derived from 'const std::__shared_ptr<_Tp, _Lp>'
+  109 |                         if(pair.first == this->data.find(location))
+      |                                                                  ^
+C:/Program Files/GIT/eclipse/mingw/mingw64/include/c++/13.2.0/bits/shared_ptr.h:555:5: note: candidate: 'template<class _Tp, class _Up> bool std::operator==(const shared_ptr<_Tp>&, const shared_ptr<_Tp>&)'
+  555 |     operator==(const shared_ptr<_Tp>& __a, const shared_ptr<_Up>& __b) noexcept
+      |     ^~~~~~~~
+C:/Program Files/GIT/eclipse/mingw/mingw64/include/c++/13.2.0/bits/shared_ptr.h:555:5: note:   template argument deduction/substitution failed:
+..\myCode\MeasurementDb.cpp:109:66: note:   'const std::__cxx11::basic_string<char>' is not derived from 'const std::shared_ptr<_Tp>'
+  109 |                         if(pair.first == this->data.find(location))
+      |                                                                  ^
+C:/Program Files/GIT/eclipse/mingw/mingw64/include/c++/13.2.0/bits/shared_ptr.h:561:5: note: candidate: 'template<class _Tp> bool std::operator==(const shared_ptr<_Tp>&, nullptr_t)'
+  561 |     operator==(const shared_ptr<_Tp>& __a, nullptr_t) noexcept
+      |     ^~~~~~~~
+C:/Program Files/GIT/eclipse/mingw/mingw64/include/c++/13.2.0/bits/shared_ptr.h:561:5: note:   template argument deduction/substitution failed:
+..\myCode\MeasurementDb.cpp:109:66: note:   'const std::__cxx11::basic_string<char>' is not derived from 'const std::shared_ptr<_Tp>'
+  109 |                         if(pair.first == this->data.find(location))
+      |                                                                  ^
+C:/Program Files/GIT/eclipse/mingw/mingw64/include/c++/13.2.0/bits/shared_ptr.h:582:5: note: candidate: 'template<class _Tp> bool std::operator==(nullptr_t, const shared_ptr<_Tp>&)'
+  582 |     operator==(nullptr_t, const shared_ptr<_Tp>& __a) noexcept
+      |     ^~~~~~~~
+C:/Program Files/GIT/eclipse/mingw/mingw64/include/c++/13.2.0/bits/shared_ptr.h:582:5: note:   template argument deduction/substitution failed:
+..\myCode\MeasurementDb.cpp:109:66: note:   'std::map<std::__cxx11::basic_string<char>, std::vector<std::shared_ptr<Measurement> > >::iterator' {aka 'std::_Rb_tree<std::__cxx11::basic_string<char>, std::pair<const std::__cxx11::basic_string<char>, std::vector<std::shared_ptr<Measurement> > >, std::_Select1st<std::pair<const std::__cxx11::basic_string<char>, std::vector<std::shared_ptr<Measurement> > > >, std::less<std::__cxx11::basic_string<char> >, std::allocator<std::pair<const std::__cxx11::basic_string<char>, std::vector<std::shared_ptr<Measurement> > > > >::iterator'} is not derived from 'const std::shared_ptr<_Tp>'
+  109 |                         if(pair.first == this->data.find(location))
+      |                                                                  ^
+In file included from C:/Program Files/GIT/eclipse/mingw/mingw64/include/c++/13.2.0/vector:66,
+                 from ..\myCode\MeasurementDb.h:15:
+C:/Program Files/GIT/eclipse/mingw/mingw64/include/c++/13.2.0/bits/stl_vector.h:2037:5: note: candidate: 'template<class _Tp, class _Alloc> bool std::operator==(const vector<_Tp, _Alloc>&, const vector<_Tp, _Alloc>&)'
+ 2037 |     operator==(const vector<_Tp, _Alloc>& __x, const vector<_Tp, _Alloc>& __y)
+      |     ^~~~~~~~
+C:/Program Files/GIT/eclipse/mingw/mingw64/include/c++/13.2.0/bits/stl_vector.h:2037:5: note:   template argument deduction/substitution failed:
+..\myCode\MeasurementDb.cpp:109:66: note:   'const std::__cxx11::basic_string<char>' is not derived from 'const std::vector<_Tp, _Alloc>'
+  109 |                         if(pair.first == this->data.find(location))
+      |                                                                  ^
+In file included from C:/Program Files/GIT/eclipse/mingw/mingw64/include/c++/13.2.0/map:63,
+                 from ..\myCode\MeasurementDb.h:16:
+C:/Program Files/GIT/eclipse/mingw/mingw64/include/c++/13.2.0/bits/stl_map.h:1513:5: note: candidate: 'template<class _Key, class _Tp, class _Compare, class _Alloc> bool std::operator==(const map<_Key, _Tp, _Compare, _Alloc>&, const map<_Key, _Tp, _Compare, _Alloc>&)'
+ 1513 |     operator==(const map<_Key, _Tp, _Compare, _Alloc>& __x,
+      |     ^~~~~~~~
+C:/Program Files/GIT/eclipse/mingw/mingw64/include/c++/13.2.0/bits/stl_map.h:1513:5: note:   template argument deduction/substitution failed:
+..\myCode\MeasurementDb.cpp:109:66: note:   'const std::__cxx11::basic_string<char>' is not derived from 'const std::map<_Key, _Tp, _Compare, _Alloc>'
+  109 |                         if(pair.first == this->data.find(location))
+      |                                                                  ^
+In file included from C:/Program Files/GIT/eclipse/mingw/mingw64/include/c++/13.2.0/map:64:
+C:/Program Files/GIT/eclipse/mingw/mingw64/include/c++/13.2.0/bits/stl_multimap.h:1134:5: note: candidate: 'template<class _Key, class _Tp, class _Compare, class _Alloc> bool std::operator==(const multimap<_Key, _Tp, _Compare, _Alloc>&, const multimap<_Key, _Tp, _Compare, _Alloc>&)'
+ 1134 |     operator==(const multimap<_Key, _Tp, _Compare, _Alloc>& __x,
+      |     ^~~~~~~~
+C:/Program Files/GIT/eclipse/mingw/mingw64/include/c++/13.2.0/bits/stl_multimap.h:1134:5: note:   template argument deduction/substitution failed:
+..\myCode\MeasurementDb.cpp:109:66: note:   'const std::__cxx11::basic_string<char>' is not derived from 'const std::multimap<_Key, _Tp, _Compare, _Alloc>'
+  109 |                         if(pair.first == this->data.find(location))
+      |                                                                  ^
+In file included from C:/Program Files/GIT/eclipse/mingw/mingw64/include/c++/13.2.0/list:65,
+                 from C:/Program Files/GIT/eclipse/mingw/mingw64/include/boost/algorithm/string/std/list_traits.hpp:15,
+                 from C:/Program Files/GIT/eclipse/mingw/mingw64/include/boost/algorithm/string/std_containers_traits.hpp:20,
+                 from C:/Program Files/GIT/eclipse/mingw/mingw64/include/boost/algorithm/string.hpp:18,
+                 from ..\myCode\MeasurementDb.h:19:
+C:/Program Files/GIT/eclipse/mingw/mingw64/include/c++/13.2.0/bits/stl_list.h:2123:5: note: candidate: 'template<class _Tp, class _Alloc> bool std::operator==(const __cxx11::list<_Tp, _Alloc>&, const __cxx11::list<_Tp, _Alloc>&)'
+ 2123 |     operator==(const list<_Tp, _Alloc>& __x, const list<_Tp, _Alloc>& __y)
+      |     ^~~~~~~~
+C:/Program Files/GIT/eclipse/mingw/mingw64/include/c++/13.2.0/bits/stl_list.h:2123:5: note:   template argument deduction/substitution failed:
+..\myCode\MeasurementDb.cpp:109:66: note:   'const std::__cxx11::basic_string<char>' is not derived from 'const std::__cxx11::list<_Tp, _Alloc>'
+  109 |                         if(pair.first == this->data.find(location))
+      |                                                                  ^
+In file included from C:/Program Files/GIT/eclipse/mingw/mingw64/include/c++/13.2.0/functional:59,
+                 from C:/Program Files/GIT/eclipse/mingw/mingw64/include/boost/algorithm/string/detail/classification.hpp:17,
+                 from C:/Program Files/GIT/eclipse/mingw/mingw64/include/boost/algorithm/string/classification.hpp:18,
+                 from C:/Program Files/GIT/eclipse/mingw/mingw64/include/boost/algorithm/string/trim.hpp:23,
+                 from C:/Program Files/GIT/eclipse/mingw/mingw64/include/boost/algorithm/string.hpp:19:
+C:/Program Files/GIT/eclipse/mingw/mingw64/include/c++/13.2.0/bits/std_function.h:737:5: note: candidate: 'template<class _Res, class ... _Args> bool std::operator==(const function<_Res(_ArgTypes ...)>&, nullptr_t)'
+  737 |     operator==(const function<_Res(_Args...)>& __f, nullptr_t) noexcept
+      |     ^~~~~~~~
+C:/Program Files/GIT/eclipse/mingw/mingw64/include/c++/13.2.0/bits/std_function.h:737:5: note:   template argument deduction/substitution failed:
+..\myCode\MeasurementDb.cpp:109:66: note:   'const std::__cxx11::basic_string<char>' is not derived from 'const std::function<_Res(_ArgTypes ...)>'
+  109 |                         if(pair.first == this->data.find(location))
+      |                                                                  ^
+C:/Program Files/GIT/eclipse/mingw/mingw64/include/c++/13.2.0/bits/std_function.h:744:5: note: candidate: 'template<class _Res, class ... _Args> bool std::operator==(nullptr_t, const function<_Res(_ArgTypes ...)>&)'
+  744 |     operator==(nullptr_t, const function<_Res(_Args...)>& __f) noexcept
+      |     ^~~~~~~~
+C:/Program Files/GIT/eclipse/mingw/mingw64/include/c++/13.2.0/bits/std_function.h:744:5: note:   template argument deduction/substitution failed:
+..\myCode\MeasurementDb.cpp:109:66: note:   'std::map<std::__cxx11::basic_string<char>, std::vector<std::shared_ptr<Measurement> > >::iterator' {aka 'std::_Rb_tree<std::__cxx11::basic_string<char>, std::pair<const std::__cxx11::basic_string<char>, std::vector<std::shared_ptr<Measurement> > >, std::_Select1st<std::pair<const std::__cxx11::basic_string<char>, std::vector<std::shared_ptr<Measurement> > > >, std::less<std::__cxx11::basic_string<char> >, std::allocator<std::pair<const std::__cxx11::basic_string<char>, std::vector<std::shared_ptr<Measurement> > > > >::iterator'} is not derived from 'const std::function<_Res(_ArgTypes ...)>'
+  109 |                         if(pair.first == this->data.find(location))
+      |                                                                  ^
+In file included from C:/Program Files/GIT/eclipse/mingw/mingw64/include/c++/13.2.0/deque:66,
+                 from C:/Program Files/GIT/eclipse/mingw/mingw64/include/boost/algorithm/string/find_format.hpp:14,
+                 from C:/Program Files/GIT/eclipse/mingw/mingw64/include/boost/algorithm/string/replace.hpp:22,
+                 from C:/Program Files/GIT/eclipse/mingw/mingw64/include/boost/algorithm/string.hpp:25:
+C:/Program Files/GIT/eclipse/mingw/mingw64/include/c++/13.2.0/bits/stl_deque.h:2290:5: note: candidate: 'template<class _Tp, class _Alloc> bool std::operator==(const deque<_Tp, _Alloc>&, const deque<_Tp, _Alloc>&)'
+ 2290 |     operator==(const deque<_Tp, _Alloc>& __x, const deque<_Tp, _Alloc>& __y)
+      |     ^~~~~~~~
+C:/Program Files/GIT/eclipse/mingw/mingw64/include/c++/13.2.0/bits/stl_deque.h:2290:5: note:   template argument deduction/substitution failed:
+..\myCode\MeasurementDb.cpp:109:66: note:   'const std::__cxx11::basic_string<char>' is not derived from 'const std::deque<_Tp, _Alloc>'
+  109 |                         if(pair.first == this->data.find(location))
+      |                                                                  ^
+In file included from C:/Program Files/GIT/eclipse/mingw/mingw64/include/c++/13.2.0/x86_64-w64-mingw32/bits/c++allocator.h:33,
+                 from C:/Program Files/GIT/eclipse/mingw/mingw64/include/c++/13.2.0/bits/allocator.h:46:
+C:/Program Files/GIT/eclipse/mingw/mingw64/include/c++/13.2.0/bits/new_allocator.h:211:9: note: candidate: 'template<class _Up> bool std::operator==(const __new_allocator<shared_ptr<Measurement> >&, const __new_allocator<_Tp>&)'
+  211 |         operator==(const __new_allocator&, const __new_allocator<_Up>&)
+      |         ^~~~~~~~
+C:/Program Files/GIT/eclipse/mingw/mingw64/include/c++/13.2.0/bits/new_allocator.h:211:9: note:   template argument deduction/substitution failed:
+..\myCode\MeasurementDb.cpp:109:66: note:   'std::map<std::__cxx11::basic_string<char>, std::vector<std::shared_ptr<Measurement> > >::iterator' {aka 'std::_Rb_tree<std::__cxx11::basic_string<char>, std::pair<const std::__cxx11::basic_string<char>, std::vector<std::shared_ptr<Measurement> > >, std::_Select1st<std::pair<const std::__cxx11::basic_string<char>, std::vector<std::shared_ptr<Measurement> > > >, std::less<std::__cxx11::basic_string<char> >, std::allocator<std::pair<const std::__cxx11::basic_string<char>, std::vector<std::shared_ptr<Measurement> > > > >::iterator'} is not derived from 'const std::__new_allocator<_Tp>'
+  109 |                         if(pair.first == this->data.find(location))
+      |                                                                  ^
+C:/Program Files/GIT/eclipse/mingw/mingw64/include/c++/13.2.0/bits/new_allocator.h:211:9: note: candidate: 'template<class _Up> bool std::operator==(const __new_allocator<char>&, const __new_allocator<_Tp>&)'
+  211 |         operator==(const __new_allocator&, const __new_allocator<_Up>&)
+      |         ^~~~~~~~
+C:/Program Files/GIT/eclipse/mingw/mingw64/include/c++/13.2.0/bits/new_allocator.h:211:9: note:   template argument deduction/substitution failed:
+..\myCode\MeasurementDb.cpp:109:66: note:   'std::map<std::__cxx11::basic_string<char>, std::vector<std::shared_ptr<Measurement> > >::iterator' {aka 'std::_Rb_tree<std::__cxx11::basic_string<char>, std::pair<const std::__cxx11::basic_string<char>, std::vector<std::shared_ptr<Measurement> > >, std::_Select1st<std::pair<const std::__cxx11::basic_string<char>, std::vector<std::shared_ptr<Measurement> > > >, std::less<std::__cxx11::basic_string<char> >, std::allocator<std::pair<const std::__cxx11::basic_string<char>, std::vector<std::shared_ptr<Measurement> > > > >::iterator'} is not derived from 'const std::__new_allocator<_Tp>'
+  109 |                         if(pair.first == this->data.find(location))
+      |                                                                  ^
+In file included from C:/Program Files/GIT/eclipse/mingw/mingw64/include/c++/13.2.0/bits/ios_base.h:46,
+                 from C:/Program Files/GIT/eclipse/mingw/mingw64/include/c++/13.2.0/ios:44:
+C:/Program Files/GIT/eclipse/mingw/mingw64/include/c++/13.2.0/system_error:449:3: note: candidate: 'bool std::operator==(const error_code&, const error_code&)'
+  449 |   operator==(const error_code& __lhs, const error_code& __rhs) noexcept
+      |   ^~~~~~~~
+C:/Program Files/GIT/eclipse/mingw/mingw64/include/c++/13.2.0/system_error:449:32: note:   no known conversion for argument 1 from 'const std::__cxx11::basic_string<char>' to 'const std::error_code&'
+  449 |   operator==(const error_code& __lhs, const error_code& __rhs) noexcept
+      |              ~~~~~~~~~~~~~~~~~~^~~~~
+C:/Program Files/GIT/eclipse/mingw/mingw64/include/c++/13.2.0/system_error:465:3: note: candidate: 'bool std::operator==(const error_code&, const error_condition&)'
+  465 |   operator==(const error_code& __lhs, const error_condition& __rhs) noexcept
+      |   ^~~~~~~~
+C:/Program Files/GIT/eclipse/mingw/mingw64/include/c++/13.2.0/system_error:465:32: note:   no known conversion for argument 1 from 'const std::__cxx11::basic_string<char>' to 'const std::error_code&'
+  465 |   operator==(const error_code& __lhs, const error_condition& __rhs) noexcept
+      |              ~~~~~~~~~~~~~~~~~~^~~~~
+C:/Program Files/GIT/eclipse/mingw/mingw64/include/c++/13.2.0/system_error:480:3: note: candidate: 'bool std::operator==(const error_condition&, const error_condition&)'
+  480 |   operator==(const error_condition& __lhs,
+      |   ^~~~~~~~
+C:/Program Files/GIT/eclipse/mingw/mingw64/include/c++/13.2.0/system_error:480:37: note:   no known conversion for argument 1 from 'const std::__cxx11::basic_string<char>' to 'const std::error_condition&'
+  480 |   operator==(const error_condition& __lhs,
+      |              ~~~~~~~~~~~~~~~~~~~~~~~^~~~~
+C:/Program Files/GIT/eclipse/mingw/mingw64/include/c++/13.2.0/system_error:517:3: note: candidate: 'bool std::operator==(const error_condition&, const error_code&)'
+  517 |   operator==(const error_condition& __lhs, const error_code& __rhs) noexcept
+      |   ^~~~~~~~
+C:/Program Files/GIT/eclipse/mingw/mingw64/include/c++/13.2.0/system_error:517:37: note:   no known conversion for argument 1 from 'const std::__cxx11::basic_string<char>' to 'const std::error_condition&'
+  517 |   operator==(const error_condition& __lhs, const error_code& __rhs) noexcept
+      |              ~~~~~~~~~~~~~~~~~~~~~~~^~~~~
+C:/Program Files/GIT/eclipse/mingw/mingw64/include/c++/13.2.0/bits/allocator.h:216:7: note: candidate: 'bool std::operator==(const allocator<shared_ptr<Measurement> >&, const allocator<shared_ptr<Measurement> >&)'
+  216 |       operator==(const allocator&, const allocator&) _GLIBCXX_NOTHROW
+      |       ^~~~~~~~
+C:/Program Files/GIT/eclipse/mingw/mingw64/include/c++/13.2.0/bits/allocator.h:216:18: note:   no known conversion for argument 1 from 'const std::__cxx11::basic_string<char>' to 'const std::allocator<std::shared_ptr<Measurement> >&'
+  216 |       operator==(const allocator&, const allocator&) _GLIBCXX_NOTHROW
+      |                  ^~~~~~~~~~~~~~~~
+C:/Program Files/GIT/eclipse/mingw/mingw64/include/c++/13.2.0/bits/allocator.h:216:7: note: candidate: 'bool std::operator==(const allocator<char>&, const allocator<char>&)'
+  216 |       operator==(const allocator&, const allocator&) _GLIBCXX_NOTHROW
+      |       ^~~~~~~~
+C:/Program Files/GIT/eclipse/mingw/mingw64/include/c++/13.2.0/bits/allocator.h:216:18: note:   no known conversion for argument 1 from 'const std::__cxx11::basic_string<char>' to 'const std::allocator<char>&'
+  216 |       operator==(const allocator&, const allocator&) _GLIBCXX_NOTHROW
+      |                  ^~~~~~~~~~~~~~~~
+In file included from C:/Program Files/GIT/eclipse/mingw/mingw64/include/c++/13.2.0/map:62:
+C:/Program Files/GIT/eclipse/mingw/mingw64/include/c++/13.2.0/bits/stl_tree.h:315:7: note: candidate: 'bool std::operator==(const _Rb_tree_iterator<pair<const __cxx11::basic_string<char>, vector<shared_ptr<Measurement> > > >::_Self&, const _Rb_tree_iterator<pair<const __cxx11::basic_string<char>, vector<shared_ptr<Measurement> > > >::_Self&)'
+  315 |       operator==(const _Self& __x, const _Self& __y) _GLIBCXX_NOEXCEPT
+      |       ^~~~~~~~
+C:/Program Files/GIT/eclipse/mingw/mingw64/include/c++/13.2.0/bits/stl_tree.h:315:31: note:   no known conversion for argument 1 from 'const std::__cxx11::basic_string<char>' to 'const std::_Rb_tree_iterator<std::pair<const std::__cxx11::basic_string<char>, std::vector<std::shared_ptr<Measurement> > > >::_Self&'
+  315 |       operator==(const _Self& __x, const _Self& __y) _GLIBCXX_NOEXCEPT
+      |                  ~~~~~~~~~~~~~^~~
+09:10:23 **** Incremental Build of configuration Debug for project MeasurementDb ****
+Info: Internal Builder is used for build
+g++ -std=c++1y -O0 -g3 -Wall -c -fmessage-length=0 -Wall -Werror=return-type -o "myCode\\Measurement.o" "..\\myCode\\Measurement.cpp" 
+g++ -std=c++1y -O0 -g3 -Wall -c -fmessage-length=0 -Wall -Werror=return-type -o "myCode\\main.o" "..\\myCode\\main.cpp" 
+g++ -std=c++1y -O0 -g3 -Wall -c -fmessage-length=0 -Wall -Werror=return-type -o "myCode\\Temperature.o" "..\\myCode\\Temperature.cpp" 
+g++ -std=c++1y -O0 -g3 -Wall -c -fmessage-length=0 -Wall -Werror=return-type -o "myCode\\MeasurementDb.o" "..\\myCode\\MeasurementDb.cpp" 
+g++ -o MeasurementDb.exe "myCode\\Humidity.o" "myCode\\Measurement.o" "myCode\\MeasurementDb.o" "myCode\\Temperature.o" "myCode\\main.o" 
+09:11:00 **** Incremental Build of configuration Debug for project MeasurementDb ****
+Info: Internal Builder is used for build
+g++ -std=c++1y -O0 -g3 -Wall -c -fmessage-length=0 -Wall -Werror=return-type -o "myCode\\MeasurementDb.o" "..\\myCode\\MeasurementDb.cpp" 
+g++ -o MeasurementDb.exe "myCode\\Humidity.o" "myCode\\Measurement.o" "myCode\\MeasurementDb.o" "myCode\\Temperature.o" "myCode\\main.o" 
+Info: Nothing to build for MeasurementDb
+09:12:40 **** Incremental Build of configuration Debug for project MeasurementDb ****
+Info: Internal Builder is used for build
+g++ -std=c++1y -O0 -g3 -Wall -c -fmessage-length=0 -Wall -Werror=return-type -o "myCode\\main.o" "..\\myCode\\main.cpp" 
+g++ -o MeasurementDb.exe "myCode\\Humidity.o" "myCode\\Measurement.o" "myCode\\MeasurementDb.o" "myCode\\Temperature.o" "myCode\\main.o" 
+09:12:56 **** Incremental Build of configuration Debug for project MeasurementDb ****
+Info: Internal Builder is used for build
+g++ -std=c++1y -O0 -g3 -Wall -c -fmessage-length=0 -Wall -Werror=return-type -o "myCode\\MeasurementDb.o" "..\\myCode\\MeasurementDb.cpp" 
+g++ -o MeasurementDb.exe "myCode\\Humidity.o" "myCode\\Measurement.o" "myCode\\MeasurementDb.o" "myCode\\Temperature.o" "myCode\\main.o" 
+09:13:05 **** Incremental Build of configuration Debug for project MeasurementDb ****
+Info: Internal Builder is used for build
+g++ -std=c++1y -O0 -g3 -Wall -c -fmessage-length=0 -Wall -Werror=return-type -o "myCode\\MeasurementDb.o" "..\\myCode\\MeasurementDb.cpp" 
+g++ -o MeasurementDb.exe "myCode\\Humidity.o" "myCode\\Measurement.o" "myCode\\MeasurementDb.o" "myCode\\Temperature.o" "myCode\\main.o" 
+09:13:54 **** Incremental Build of configuration Debug for project MeasurementDb ****
+Info: Internal Builder is used for build
+g++ -std=c++1y -O0 -g3 -Wall -c -fmessage-length=0 -Wall -Werror=return-type -o "myCode\\main.o" "..\\myCode\\main.cpp" 
+g++ -std=c++1y -O0 -g3 -Wall -c -fmessage-length=0 -Wall -Werror=return-type -o "myCode\\MeasurementDb.o" "..\\myCode\\MeasurementDb.cpp" 
+g++ -o MeasurementDb.exe "myCode\\Humidity.o" "myCode\\Measurement.o" "myCode\\MeasurementDb.o" "myCode\\Temperature.o" "myCode\\main.o" 
+09:14:19 **** Incremental Build of configuration Debug for project MeasurementDb ****
+Info: Internal Builder is used for build
+g++ -std=c++1y -O0 -g3 -Wall -c -fmessage-length=0 -Wall -Werror=return-type -o "myCode\\MeasurementDb.o" "..\\myCode\\MeasurementDb.cpp" 
+g++ -o MeasurementDb.exe "myCode\\Humidity.o" "myCode\\Measurement.o" "myCode\\MeasurementDb.o" "myCode\\Temperature.o" "myCode\\main.o" 
+09:15:10 **** Incremental Build of configuration Debug for project MeasurementDb ****
+Info: Internal Builder is used for build
+g++ -std=c++1y -O0 -g3 -Wall -c -fmessage-length=0 -Wall -Werror=return-type -o "myCode\\MeasurementDb.o" "..\\myCode\\MeasurementDb.cpp" 
+g++ -o MeasurementDb.exe "myCode\\Humidity.o" "myCode\\Measurement.o" "myCode\\MeasurementDb.o" "myCode\\Temperature.o" "myCode\\main.o" 
+09:15:33 **** Incremental Build of configuration Debug for project MeasurementDb ****
+Info: Internal Builder is used for build
+g++ -std=c++1y -O0 -g3 -Wall -c -fmessage-length=0 -Wall -Werror=return-type -o "myCode\\MeasurementDb.o" "..\\myCode\\MeasurementDb.cpp" 
+..\myCode\MeasurementDb.cpp: In member function 'bool MeasurementDb::maximumTemperature(std::string&, std::shared_ptr<Measurement>&)':
+..\myCode\MeasurementDb.cpp:105:14: error: no match for 'operator<<' (operand types are 'std::ostream' {aka 'std::basic_ostream<char>'} and 'std::pair<const std::__cxx11::basic_string<char>, std::vector<std::shared_ptr<Measurement> > >')
+  105 |         cout << *itr << endl;
+      |         ~~~~ ^~ ~~~~
+      |         |       |
+      |         |       std::pair<const std::__cxx11::basic_string<char>, std::vector<std::shared_ptr<Measurement> > >
+      |         std::ostream {aka std::basic_ostream<char>}
+In file included from C:/Program Files/GIT/eclipse/mingw/mingw64/include/c++/13.2.0/iostream:41,
+                 from ..\myCode\Measurement.h:13,
+                 from ..\myCode\MeasurementDb.h:11,
+                 from ..\myCode\MeasurementDb.cpp:8:
+C:/Program Files/GIT/eclipse/mingw/mingw64/include/c++/13.2.0/ostream:110:7: note: candidate: 'std::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(__ostream_type& (*)(__ostream_type&)) [with _CharT = char; _Traits = std::char_traits<char>; __ostream_type = std::basic_ostream<char>]'
+  110 |       operator<<(__ostream_type& (*__pf)(__ostream_type&))
+      |       ^~~~~~~~
+C:/Program Files/GIT/eclipse/mingw/mingw64/include/c++/13.2.0/ostream:110:36: note:   no known conversion for argument 1 from 'std::pair<const std::__cxx11::basic_string<char>, std::vector<std::shared_ptr<Measurement> > >' to 'std::basic_ostream<char>::__ostream_type& (*)(std::basic_ostream<char>::__ostream_type&)' {aka 'std::basic_ostream<char>& (*)(std::basic_ostream<char>&)'}
+  110 |       operator<<(__ostream_type& (*__pf)(__ostream_type&))
+      |                  ~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~
+C:/Program Files/GIT/eclipse/mingw/mingw64/include/c++/13.2.0/ostream:119:7: note: candidate: 'std::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(__ios_type& (*)(__ios_type&)) [with _CharT = char; _Traits = std::char_traits<char>; __ostream_type = std::basic_ostream<char>; __ios_type = std::basic_ios<char>]'
+  119 |       operator<<(__ios_type& (*__pf)(__ios_type&))
+      |       ^~~~~~~~
+C:/Program Files/GIT/eclipse/mingw/mingw64/include/c++/13.2.0/ostream:119:32: note:   no known conversion for argument 1 from 'std::pair<const std::__cxx11::basic_string<char>, std::vector<std::shared_ptr<Measurement> > >' to 'std::basic_ostream<char>::__ios_type& (*)(std::basic_ostream<char>::__ios_type&)' {aka 'std::basic_ios<char>& (*)(std::basic_ios<char>&)'}
+  119 |       operator<<(__ios_type& (*__pf)(__ios_type&))
+      |                  ~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~
+C:/Program Files/GIT/eclipse/mingw/mingw64/include/c++/13.2.0/ostream:129:7: note: candidate: 'std::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(std::ios_base& (*)(std::ios_base&)) [with _CharT = char; _Traits = std::char_traits<char>; __ostream_type = std::basic_ostream<char>]'
+  129 |       operator<<(ios_base& (*__pf) (ios_base&))
+      |       ^~~~~~~~
+C:/Program Files/GIT/eclipse/mingw/mingw64/include/c++/13.2.0/ostream:129:30: note:   no known conversion for argument 1 from 'std::pair<const std::__cxx11::basic_string<char>, std::vector<std::shared_ptr<Measurement> > >' to 'std::ios_base& (*)(std::ios_base&)'
+  129 |       operator<<(ios_base& (*__pf) (ios_base&))
+      |                  ~~~~~~~~~~~~^~~~~~~~~~~~~~~~~
+C:/Program Files/GIT/eclipse/mingw/mingw64/include/c++/13.2.0/ostream:168:7: note: candidate: 'std::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(long int) [with _CharT = char; _Traits = std::char_traits<char>; __ostream_type = std::basic_ostream<char>]'
+  168 |       operator<<(long __n)
+      |       ^~~~~~~~
+C:/Program Files/GIT/eclipse/mingw/mingw64/include/c++/13.2.0/ostream:168:23: note:   no known conversion for argument 1 from 'std::pair<const std::__cxx11::basic_string<char>, std::vector<std::shared_ptr<Measurement> > >' to 'long int'
+  168 |       operator<<(long __n)
+      |                  ~~~~~^~~
+C:/Program Files/GIT/eclipse/mingw/mingw64/include/c++/13.2.0/ostream:172:7: note: candidate: 'std::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(long unsigned int) [with _CharT = char; _Traits = std::char_traits<char>; __ostream_type = std::basic_ostream<char>]'
+  172 |       operator<<(unsigned long __n)
+      |       ^~~~~~~~
+C:/Program Files/GIT/eclipse/mingw/mingw64/include/c++/13.2.0/ostream:172:32: note:   no known conversion for argument 1 from 'std::pair<const std::__cxx11::basic_string<char>, std::vector<std::shared_ptr<Measurement> > >' to 'long unsigned int'
+  172 |       operator<<(unsigned long __n)
+      |                  ~~~~~~~~~~~~~~^~~
+C:/Program Files/GIT/eclipse/mingw/mingw64/include/c++/13.2.0/ostream:176:7: note: candidate: 'std::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(bool) [with _CharT = char; _Traits = std::char_traits<char>; __ostream_type = std::basic_ostream<char>]'
+  176 |       operator<<(bool __n)
+      |       ^~~~~~~~
+C:/Program Files/GIT/eclipse/mingw/mingw64/include/c++/13.2.0/ostream:176:23: note:   no known conversion for argument 1 from 'std::pair<const std::__cxx11::basic_string<char>, std::vector<std::shared_ptr<Measurement> > >' to 'bool'
+  176 |       operator<<(bool __n)
+      |                  ~~~~~^~~
+In file included from C:/Program Files/GIT/eclipse/mingw/mingw64/include/c++/13.2.0/ostream:880:
+C:/Program Files/GIT/eclipse/mingw/mingw64/include/c++/13.2.0/bits/ostream.tcc:96:5: note: candidate: 'std::basic_ostream<_CharT, _Traits>& std::basic_ostream<_CharT, _Traits>::operator<<(short int) [with _CharT = char; _Traits = std::char_traits<char>]'
+   96 |     basic_ostream<_CharT, _Traits>::
+      |     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:/Program Files/GIT/eclipse/mingw/mingw64/include/c++/13.2.0/bits/ostream.tcc:97:22: note:   no known conversion for argument 1 from 'std::pair<const std::__cxx11::basic_string<char>, std::vector<std::shared_ptr<Measurement> > >' to 'short int'
+   97 |     operator<<(short __n)
+      |                ~~~~~~^~~
+C:/Program Files/GIT/eclipse/mingw/mingw64/include/c++/13.2.0/ostream:183:7: note: candidate: 'std::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(short unsigned int) [with _CharT = char; _Traits = std::char_traits<char>; __ostream_type = std::basic_ostream<char>]'
+  183 |       operator<<(unsigned short __n)
+      |       ^~~~~~~~
+C:/Program Files/GIT/eclipse/mingw/mingw64/include/c++/13.2.0/ostream:183:33: note:   no known conversion for argument 1 from 'std::pair<const std::__cxx11::basic_string<char>, std::vector<std::shared_ptr<Measurement> > >' to 'short unsigned int'
+  183 |       operator<<(unsigned short __n)
+      |                  ~~~~~~~~~~~~~~~^~~
+C:/Program Files/GIT/eclipse/mingw/mingw64/include/c++/13.2.0/bits/ostream.tcc:110:5: note: candidate: 'std::basic_ostream<_CharT, _Traits>& std::basic_ostream<_CharT, _Traits>::operator<<(int) [with _CharT = char; _Traits = std::char_traits<char>]'
+  110 |     basic_ostream<_CharT, _Traits>::
+      |     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:/Program Files/GIT/eclipse/mingw/mingw64/include/c++/13.2.0/bits/ostream.tcc:111:20: note:   no known conversion for argument 1 from 'std::pair<const std::__cxx11::basic_string<char>, std::vector<std::shared_ptr<Measurement> > >' to 'int'
+  111 |     operator<<(int __n)
+      |                ~~~~^~~
+C:/Program Files/GIT/eclipse/mingw/mingw64/include/c++/13.2.0/ostream:194:7: note: candidate: 'std::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(unsigned int) [with _CharT = char; _Traits = std::char_traits<char>; __ostream_type = std::basic_ostream<char>]'
+  194 |       operator<<(unsigned int __n)
+      |       ^~~~~~~~
+C:/Program Files/GIT/eclipse/mingw/mingw64/include/c++/13.2.0/ostream:194:31: note:   no known conversion for argument 1 from 'std::pair<const std::__cxx11::basic_string<char>, std::vector<std::shared_ptr<Measurement> > >' to 'unsigned int'
+  194 |       operator<<(unsigned int __n)
+      |                  ~~~~~~~~~~~~~^~~
+C:/Program Files/GIT/eclipse/mingw/mingw64/include/c++/13.2.0/ostream:203:7: note: candidate: 'std::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(long long int) [with _CharT = char; _Traits = std::char_traits<char>; __ostream_type = std::basic_ostream<char>]'
+  203 |       operator<<(long long __n)
+      |       ^~~~~~~~
+C:/Program Files/GIT/eclipse/mingw/mingw64/include/c++/13.2.0/ostream:203:28: note:   no known conversion for argument 1 from 'std::pair<const std::__cxx11::basic_string<char>, std::vector<std::shared_ptr<Measurement> > >' to 'long long int'
+  203 |       operator<<(long long __n)
+      |                  ~~~~~~~~~~^~~
+C:/Program Files/GIT/eclipse/mingw/mingw64/include/c++/13.2.0/ostream:207:7: note: candidate: 'std::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(long long unsigned int) [with _CharT = char; _Traits = std::char_traits<char>; __ostream_type = std::basic_ostream<char>]'
+  207 |       operator<<(unsigned long long __n)
+      |       ^~~~~~~~
+C:/Program Files/GIT/eclipse/mingw/mingw64/include/c++/13.2.0/ostream:207:37: note:   no known conversion for argument 1 from 'std::pair<const std::__cxx11::basic_string<char>, std::vector<std::shared_ptr<Measurement> > >' to 'long long unsigned int'
+  207 |       operator<<(unsigned long long __n)
+      |                  ~~~~~~~~~~~~~~~~~~~^~~
+C:/Program Files/GIT/eclipse/mingw/mingw64/include/c++/13.2.0/ostream:222:7: note: candidate: 'std::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(double) [with _CharT = char; _Traits = std::char_traits<char>; __ostream_type = std::basic_ostream<char>]'
+  222 |       operator<<(double __f)
+      |       ^~~~~~~~
+C:/Program Files/GIT/eclipse/mingw/mingw64/include/c++/13.2.0/ostream:222:25: note:   no known conversion for argument 1 from 'std::pair<const std::__cxx11::basic_string<char>, std::vector<std::shared_ptr<Measurement> > >' to 'double'
+  222 |       operator<<(double __f)
+      |                  ~~~~~~~^~~
+C:/Program Files/GIT/eclipse/mingw/mingw64/include/c++/13.2.0/ostream:226:7: note: candidate: 'std::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(float) [with _CharT = char; _Traits = std::char_traits<char>; __ostream_type = std::basic_ostream<char>]'
+  226 |       operator<<(float __f)
+      |       ^~~~~~~~
+C:/Program Files/GIT/eclipse/mingw/mingw64/include/c++/13.2.0/ostream:226:24: note:   no known conversion for argument 1 from 'std::pair<const std::__cxx11::basic_string<char>, std::vector<std::shared_ptr<Measurement> > >' to 'float'
+  226 |       operator<<(float __f)
+      |                  ~~~~~~^~~
+C:/Program Files/GIT/eclipse/mingw/mingw64/include/c++/13.2.0/ostream:234:7: note: candidate: 'std::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(long double) [with _CharT = char; _Traits = std::char_traits<char>; __ostream_type = std::basic_ostream<char>]'
+  234 |       operator<<(long double __f)
+      |       ^~~~~~~~
+C:/Program Files/GIT/eclipse/mingw/mingw64/include/c++/13.2.0/ostream:234:30: note:   no known conversion for argument 1 from 'std::pair<const std::__cxx11::basic_string<char>, std::vector<std::shared_ptr<Measurement> > >' to 'long double'
+  234 |       operator<<(long double __f)
+      |                  ~~~~~~~~~~~~^~~
+C:/Program Files/GIT/eclipse/mingw/mingw64/include/c++/13.2.0/ostream:292:7: note: candidate: 'std::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(const void*) [with _CharT = char; _Traits = std::char_traits<char>; __ostream_type = std::basic_ostream<char>]'
+  292 |       operator<<(const void* __p)
+      |       ^~~~~~~~
+C:/Program Files/GIT/eclipse/mingw/mingw64/include/c++/13.2.0/ostream:292:30: note:   no known conversion for argument 1 from 'std::pair<const std::__cxx11::basic_string<char>, std::vector<std::shared_ptr<Measurement> > >' to 'const void*'
+  292 |       operator<<(const void* __p)
+      |                  ~~~~~~~~~~~~^~~
+C:/Program Files/GIT/eclipse/mingw/mingw64/include/c++/13.2.0/bits/ostream.tcc:124:5: note: candidate: 'std::basic_ostream<_CharT, _Traits>& std::basic_ostream<_CharT, _Traits>::operator<<(__streambuf_type*) [with _CharT = char; _Traits = std::char_traits<char>; __streambuf_type = std::basic_streambuf<char>]'
+  124 |     basic_ostream<_CharT, _Traits>::
+      |     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:/Program Files/GIT/eclipse/mingw/mingw64/include/c++/13.2.0/bits/ostream.tcc:125:34: note:   no known conversion for argument 1 from 'std::pair<const std::__cxx11::basic_string<char>, std::vector<std::shared_ptr<Measurement> > >' to 'std::basic_ostream<char>::__streambuf_type*' {aka 'std::basic_streambuf<char>*'}
+  125 |     operator<<(__streambuf_type* __sbin)
+      |                ~~~~~~~~~~~~~~~~~~^~~~~~
+..\myCode\Measurement.h:33:15: note: candidate: 'std::ostream& operator<<(std::ostream&, Measurement&)'
+   33 | std::ostream& operator<<(std::ostream& lhs, Measurement& rhs);
+      |               ^~~~~~~~
+..\myCode\Measurement.h:33:58: note:   no known conversion for argument 2 from 'std::pair<const std::__cxx11::basic_string<char>, std::vector<std::shared_ptr<Measurement> > >' to 'Measurement&'
+   33 | std::ostream& operator<<(std::ostream& lhs, Measurement& rhs);
+      |                                             ~~~~~~~~~~~~~^~~
+In file included from C:/Program Files/GIT/eclipse/mingw/mingw64/include/c++/13.2.0/string:54,
+                 from ..\myCode\Measurement.h:12:
+C:/Program Files/GIT/eclipse/mingw/mingw64/include/c++/13.2.0/bits/basic_string.h:4020:5: note: candidate: 'template<class _CharT, class _Traits, class _Alloc> std::basic_ostream<_CharT, _Traits>& std::operator<<(basic_ostream<_CharT, _Traits>&, const __cxx11::basic_string<_CharT, _Traits, _Alloc>&)'
+ 4020 |     operator<<(basic_ostream<_CharT, _Traits>& __os,
+      |     ^~~~~~~~
+C:/Program Files/GIT/eclipse/mingw/mingw64/include/c++/13.2.0/bits/basic_string.h:4020:5: note:   template argument deduction/substitution failed:
+..\myCode\MeasurementDb.cpp:105:18: note:   'std::pair<const std::__cxx11::basic_string<char>, std::vector<std::shared_ptr<Measurement> > >' is not derived from 'const std::__cxx11::basic_string<_CharT, _Traits, _Alloc>'
+  105 |         cout << *itr << endl;
+      |                  ^~~
+In file included from C:/Program Files/GIT/eclipse/mingw/mingw64/include/c++/13.2.0/bits/ios_base.h:46,
+                 from C:/Program Files/GIT/eclipse/mingw/mingw64/include/c++/13.2.0/ios:44,
+                 from C:/Program Files/GIT/eclipse/mingw/mingw64/include/c++/13.2.0/ostream:40:
+C:/Program Files/GIT/eclipse/mingw/mingw64/include/c++/13.2.0/system_error:339:5: note: candidate: 'template<class _CharT, class _Traits> std::basic_ostream<_CharT, _Traits>& std::operator<<(basic_ostream<_CharT, _Traits>&, const error_code&)'
+  339 |     operator<<(basic_ostream<_CharT, _Traits>& __os, const error_code& __e)
+      |     ^~~~~~~~
+C:/Program Files/GIT/eclipse/mingw/mingw64/include/c++/13.2.0/system_error:339:5: note:   template argument deduction/substitution failed:
+..\myCode\MeasurementDb.cpp:105:17: note:   cannot convert 'itr.std::_Rb_tree_iterator<std::pair<const std::__cxx11::basic_string<char>, std::vector<std::shared_ptr<Measurement> > > >::operator*()' (type 'std::pair<const std::__cxx11::basic_string<char>, std::vector<std::shared_ptr<Measurement> > >') to type 'const std::error_code&'
+  105 |         cout << *itr << endl;
+      |                 ^~~~
+C:/Program Files/GIT/eclipse/mingw/mingw64/include/c++/13.2.0/ostream:554:5: note: candidate: 'template<class _CharT, class _Traits> std::basic_ostream<_CharT, _Traits>& std::operator<<(basic_ostream<_CharT, _Traits>&, _CharT)'
+  554 |     operator<<(basic_ostream<_CharT, _Traits>& __out, _CharT __c)
+      |     ^~~~~~~~
+C:/Program Files/GIT/eclipse/mingw/mingw64/include/c++/13.2.0/ostream:554:5: note:   template argument deduction/substitution failed:
+..\myCode\MeasurementDb.cpp:105:18: note:   deduced conflicting types for parameter '_CharT' ('char' and 'std::pair<const std::__cxx11::basic_string<char>, std::vector<std::shared_ptr<Measurement> > >')
+  105 |         cout << *itr << endl;
+      |                  ^~~
+C:/Program Files/GIT/eclipse/mingw/mingw64/include/c++/13.2.0/ostream:564:5: note: candidate: 'template<class _CharT, class _Traits> std::basic_ostream<_CharT, _Traits>& std::operator<<(basic_ostream<_CharT, _Traits>&, char)'
+  564 |     operator<<(basic_ostream<_CharT, _Traits>& __out, char __c)
+      |     ^~~~~~~~
+C:/Program Files/GIT/eclipse/mingw/mingw64/include/c++/13.2.0/ostream:564:5: note:   template argument deduction/substitution failed:
+..\myCode\MeasurementDb.cpp:105:17: note:   cannot convert 'itr.std::_Rb_tree_iterator<std::pair<const std::__cxx11::basic_string<char>, std::vector<std::shared_ptr<Measurement> > > >::operator*()' (type 'std::pair<const std::__cxx11::basic_string<char>, std::vector<std::shared_ptr<Measurement> > >') to type 'char'
+  105 |         cout << *itr << endl;
+      |                 ^~~~
+C:/Program Files/GIT/eclipse/mingw/mingw64/include/c++/13.2.0/ostream:570:5: note: candidate: 'template<class _Traits> std::basic_ostream<char, _Traits>& std::operator<<(basic_ostream<char, _Traits>&, char)'
+  570 |     operator<<(basic_ostream<char, _Traits>& __out, char __c)
+      |     ^~~~~~~~
+C:/Program Files/GIT/eclipse/mingw/mingw64/include/c++/13.2.0/ostream:570:5: note:   template argument deduction/substitution failed:
+..\myCode\MeasurementDb.cpp:105:17: note:   cannot convert 'itr.std::_Rb_tree_iterator<std::pair<const std::__cxx11::basic_string<char>, std::vector<std::shared_ptr<Measurement> > > >::operator*()' (type 'std::pair<const std::__cxx11::basic_string<char>, std::vector<std::shared_ptr<Measurement> > >') to type 'char'
+  105 |         cout << *itr << endl;
+      |                 ^~~~
+C:/Program Files/GIT/eclipse/mingw/mingw64/include/c++/13.2.0/ostream:581:5: note: candidate: 'template<class _Traits> std::basic_ostream<char, _Traits>& std::operator<<(basic_ostream<char, _Traits>&, signed char)'
+  581 |     operator<<(basic_ostream<char, _Traits>& __out, signed char __c)
+      |     ^~~~~~~~
+C:/Program Files/GIT/eclipse/mingw/mingw64/include/c++/13.2.0/ostream:581:5: note:   template argument deduction/substitution failed:
+..\myCode\MeasurementDb.cpp:105:17: note:   cannot convert 'itr.std::_Rb_tree_iterator<std::pair<const std::__cxx11::basic_string<char>, std::vector<std::shared_ptr<Measurement> > > >::operator*()' (type 'std::pair<const std::__cxx11::basic_string<char>, std::vector<std::shared_ptr<Measurement> > >') to type 'signed char'
+  105 |         cout << *itr << endl;
+      |                 ^~~~
+C:/Program Files/GIT/eclipse/mingw/mingw64/include/c++/13.2.0/ostream:586:5: note: candidate: 'template<class _Traits> std::basic_ostream<char, _Traits>& std::operator<<(basic_ostream<char, _Traits>&, unsigned char)'
+  586 |     operator<<(basic_ostream<char, _Traits>& __out, unsigned char __c)
+      |     ^~~~~~~~
+C:/Program Files/GIT/eclipse/mingw/mingw64/include/c++/13.2.0/ostream:586:5: note:   template argument deduction/substitution failed:
+..\myCode\MeasurementDb.cpp:105:17: note:   cannot convert 'itr.std::_Rb_tree_iterator<std::pair<const std::__cxx11::basic_string<char>, std::vector<std::shared_ptr<Measurement> > > >::operator*()' (type 'std::pair<const std::__cxx11::basic_string<char>, std::vector<std::shared_ptr<Measurement> > >') to type 'unsigned char'
+  105 |         cout << *itr << endl;
+      |                 ^~~~
+C:/Program Files/GIT/eclipse/mingw/mingw64/include/c++/13.2.0/ostream:645:5: note: candidate: 'template<class _CharT, class _Traits> std::basic_ostream<_CharT, _Traits>& std::operator<<(basic_ostream<_CharT, _Traits>&, const _CharT*)'
+  645 |     operator<<(basic_ostream<_CharT, _Traits>& __out, const _CharT* __s)
+      |     ^~~~~~~~
+C:/Program Files/GIT/eclipse/mingw/mingw64/include/c++/13.2.0/ostream:645:5: note:   template argument deduction/substitution failed:
+..\myCode\MeasurementDb.cpp:105:18: note:   mismatched types 'const _CharT*' and 'std::pair<const std::__cxx11::basic_string<char>, std::vector<std::shared_ptr<Measurement> > >'
+  105 |         cout << *itr << endl;
+      |                  ^~~
+C:/Program Files/GIT/eclipse/mingw/mingw64/include/c++/13.2.0/bits/ostream.tcc:307:5: note: candidate: 'template<class _CharT, class _Traits> std::basic_ostream<_CharT, _Traits>& std::operator<<(basic_ostream<_CharT, _Traits>&, const char*)'
+  307 |     operator<<(basic_ostream<_CharT, _Traits>& __out, const char* __s)
+      |     ^~~~~~~~
+C:/Program Files/GIT/eclipse/mingw/mingw64/include/c++/13.2.0/bits/ostream.tcc:307:5: note:   template argument deduction/substitution failed:
+..\myCode\MeasurementDb.cpp:105:17: note:   cannot convert 'itr.std::_Rb_tree_iterator<std::pair<const std::__cxx11::basic_string<char>, std::vector<std::shared_ptr<Measurement> > > >::operator*()' (type 'std::pair<const std::__cxx11::basic_string<char>, std::vector<std::shared_ptr<Measurement> > >') to type 'const char*'
+  105 |         cout << *itr << endl;
+      |                 ^~~~
+C:/Program Files/GIT/eclipse/mingw/mingw64/include/c++/13.2.0/ostream:662:5: note: candidate: 'template<class _Traits> std::basic_ostream<char, _Traits>& std::operator<<(basic_ostream<char, _Traits>&, const char*)'
+  662 |     operator<<(basic_ostream<char, _Traits>& __out, const char* __s)
+      |     ^~~~~~~~
+C:/Program Files/GIT/eclipse/mingw/mingw64/include/c++/13.2.0/ostream:662:5: note:   template argument deduction/substitution failed:
+..\myCode\MeasurementDb.cpp:105:17: note:   cannot convert 'itr.std::_Rb_tree_iterator<std::pair<const std::__cxx11::basic_string<char>, std::vector<std::shared_ptr<Measurement> > > >::operator*()' (type 'std::pair<const std::__cxx11::basic_string<char>, std::vector<std::shared_ptr<Measurement> > >') to type 'const char*'
+  105 |         cout << *itr << endl;
+      |                 ^~~~
+C:/Program Files/GIT/eclipse/mingw/mingw64/include/c++/13.2.0/ostream:675:5: note: candidate: 'template<class _Traits> std::basic_ostream<char, _Traits>& std::operator<<(basic_ostream<char, _Traits>&, const signed char*)'
+  675 |     operator<<(basic_ostream<char, _Traits>& __out, const signed char* __s)
+      |     ^~~~~~~~
+C:/Program Files/GIT/eclipse/mingw/mingw64/include/c++/13.2.0/ostream:675:5: note:   template argument deduction/substitution failed:
+..\myCode\MeasurementDb.cpp:105:17: note:   cannot convert 'itr.std::_Rb_tree_iterator<std::pair<const std::__cxx11::basic_string<char>, std::vector<std::shared_ptr<Measurement> > > >::operator*()' (type 'std::pair<const std::__cxx11::basic_string<char>, std::vector<std::shared_ptr<Measurement> > >') to type 'const signed char*'
+  105 |         cout << *itr << endl;
+      |                 ^~~~
+C:/Program Files/GIT/eclipse/mingw/mingw64/include/c++/13.2.0/ostream:680:5: note: candidate: 'template<class _Traits> std::basic_ostream<char, _Traits>& std::operator<<(basic_ostream<char, _Traits>&, const unsigned char*)'
+  680 |     operator<<(basic_ostream<char, _Traits>& __out, const unsigned char* __s)
+      |     ^~~~~~~~
+C:/Program Files/GIT/eclipse/mingw/mingw64/include/c++/13.2.0/ostream:680:5: note:   template argument deduction/substitution failed:
+..\myCode\MeasurementDb.cpp:105:17: note:   cannot convert 'itr.std::_Rb_tree_iterator<std::pair<const std::__cxx11::basic_string<char>, std::vector<std::shared_ptr<Measurement> > > >::operator*()' (type 'std::pair<const std::__cxx11::basic_string<char>, std::vector<std::shared_ptr<Measurement> > >') to type 'const unsigned char*'
+  105 |         cout << *itr << endl;
+      |                 ^~~~
+C:/Program Files/GIT/eclipse/mingw/mingw64/include/c++/13.2.0/ostream:801:5: note: candidate: 'template<class _Ostream, class _Tp> _Ostream&& std::operator<<(_Ostream&&, const _Tp&)'
+  801 |     operator<<(_Ostream&& __os, const _Tp& __x)
+      |     ^~~~~~~~
+C:/Program Files/GIT/eclipse/mingw/mingw64/include/c++/13.2.0/ostream:801:5: note:   template argument deduction/substitution failed:
+C:/Program Files/GIT/eclipse/mingw/mingw64/include/c++/13.2.0/ostream: In substitution of 'template<class _Ostream, class _Tp> _Ostream&& std::operator<<(_Ostream&&, const _Tp&) [with _Ostream = std::basic_ostream<char>&; _Tp = std::pair<const std::__cxx11::basic_string<char>, std::vector<std::shared_ptr<Measurement> > >]':
+..\myCode\MeasurementDb.cpp:105:11:   required from here
+C:/Program Files/GIT/eclipse/mingw/mingw64/include/c++/13.2.0/ostream:801:5: error: no type named 'type' in 'struct std::enable_if<false, void>'
+In file included from ..\myCode\Measurement.h:15:
+C:/Program Files/GIT/eclipse/mingw/mingw64/include/c++/13.2.0/iomanip:81:5: note: candidate: 'template<class _CharT, class _Traits> std::basic_ostream<_CharT, _Traits>& std::operator<<(basic_ostream<_CharT, _Traits>&, _Resetiosflags)'
+   81 |     operator<<(basic_ostream<_CharT, _Traits>& __os, _Resetiosflags __f)
+      |     ^~~~~~~~
+C:/Program Files/GIT/eclipse/mingw/mingw64/include/c++/13.2.0/iomanip:81:5: note:   template argument deduction/substitution failed:
+..\myCode\MeasurementDb.cpp:105:17: note:   cannot convert 'itr.std::_Rb_tree_iterator<std::pair<const std::__cxx11::basic_string<char>, std::vector<std::shared_ptr<Measurement> > > >::operator*()' (type 'std::pair<const std::__cxx11::basic_string<char>, std::vector<std::shared_ptr<Measurement> > >') to type 'std::_Resetiosflags'
+  105 |         cout << *itr << endl;
+      |                 ^~~~
+C:/Program Files/GIT/eclipse/mingw/mingw64/include/c++/13.2.0/iomanip:111:5: note: candidate: 'template<class _CharT, class _Traits> std::basic_ostream<_CharT, _Traits>& std::operator<<(basic_ostream<_CharT, _Traits>&, _Setiosflags)'
+  111 |     operator<<(basic_ostream<_CharT, _Traits>& __os, _Setiosflags __f)
+      |     ^~~~~~~~
+C:/Program Files/GIT/eclipse/mingw/mingw64/include/c++/13.2.0/iomanip:111:5: note:   template argument deduction/substitution failed:
+..\myCode\MeasurementDb.cpp:105:17: note:   cannot convert 'itr.std::_Rb_tree_iterator<std::pair<const std::__cxx11::basic_string<char>, std::vector<std::shared_ptr<Measurement> > > >::operator*()' (type 'std::pair<const std::__cxx11::basic_string<char>, std::vector<std::shared_ptr<Measurement> > >') to type 'std::_Setiosflags'
+  105 |         cout << *itr << endl;
+      |                 ^~~~
+C:/Program Files/GIT/eclipse/mingw/mingw64/include/c++/13.2.0/iomanip:145:5: note: candidate: 'template<class _CharT, class _Traits> std::basic_ostream<_CharT, _Traits>& std::operator<<(basic_ostream<_CharT, _Traits>&, _Setbase)'
+  145 |     operator<<(basic_ostream<_CharT, _Traits>& __os, _Setbase __f)
+      |     ^~~~~~~~
+C:/Program Files/GIT/eclipse/mingw/mingw64/include/c++/13.2.0/iomanip:145:5: note:   template argument deduction/substitution failed:
+..\myCode\MeasurementDb.cpp:105:17: note:   cannot convert 'itr.std::_Rb_tree_iterator<std::pair<const std::__cxx11::basic_string<char>, std::vector<std::shared_ptr<Measurement> > > >::operator*()' (type 'std::pair<const std::__cxx11::basic_string<char>, std::vector<std::shared_ptr<Measurement> > >') to type 'std::_Setbase'
+  105 |         cout << *itr << endl;
+      |                 ^~~~
+C:/Program Files/GIT/eclipse/mingw/mingw64/include/c++/13.2.0/iomanip:180:5: note: candidate: 'template<class _CharT, class _Traits> std::basic_ostream<_CharT, _Traits>& std::operator<<(basic_ostream<_CharT, _Traits>&, _Setfill<_CharT>)'
+  180 |     operator<<(basic_ostream<_CharT, _Traits>& __os, _Setfill<_CharT> __f)
+      |     ^~~~~~~~
+C:/Program Files/GIT/eclipse/mingw/mingw64/include/c++/13.2.0/iomanip:180:5: note:   template argument deduction/substitution failed:
+..\myCode\MeasurementDb.cpp:105:18: note:   'std::pair<const std::__cxx11::basic_string<char>, std::vector<std::shared_ptr<Measurement> > >' is not derived from 'std::_Setfill<_CharT>'
+  105 |         cout << *itr << endl;
+      |                  ^~~
+C:/Program Files/GIT/eclipse/mingw/mingw64/include/c++/13.2.0/iomanip:210:5: note: candidate: 'template<class _CharT, class _Traits> std::basic_ostream<_CharT, _Traits>& std::operator<<(basic_ostream<_CharT, _Traits>&, _Setprecision)'
+  210 |     operator<<(basic_ostream<_CharT, _Traits>& __os, _Setprecision __f)
+      |     ^~~~~~~~
+C:/Program Files/GIT/eclipse/mingw/mingw64/include/c++/13.2.0/iomanip:210:5: note:   template argument deduction/substitution failed:
+..\myCode\MeasurementDb.cpp:105:17: note:   cannot convert 'itr.std::_Rb_tree_iterator<std::pair<const std::__cxx11::basic_string<char>, std::vector<std::shared_ptr<Measurement> > > >::operator*()' (type 'std::pair<const std::__cxx11::basic_string<char>, std::vector<std::shared_ptr<Measurement> > >') to type 'std::_Setprecision'
+  105 |         cout << *itr << endl;
+      |                 ^~~~
+C:/Program Files/GIT/eclipse/mingw/mingw64/include/c++/13.2.0/iomanip:240:5: note: candidate: 'template<class _CharT, class _Traits> std::basic_ostream<_CharT, _Traits>& std::operator<<(basic_ostream<_CharT, _Traits>&, _Setw)'
+  240 |     operator<<(basic_ostream<_CharT, _Traits>& __os, _Setw __f)
+      |     ^~~~~~~~
+C:/Program Files/GIT/eclipse/mingw/mingw64/include/c++/13.2.0/iomanip:240:5: note:   template argument deduction/substitution failed:
+..\myCode\MeasurementDb.cpp:105:17: note:   cannot convert 'itr.std::_Rb_tree_iterator<std::pair<const std::__cxx11::basic_string<char>, std::vector<std::shared_ptr<Measurement> > > >::operator*()' (type 'std::pair<const std::__cxx11::basic_string<char>, std::vector<std::shared_ptr<Measurement> > >') to type 'std::_Setw'
+  105 |         cout << *itr << endl;
+      |                 ^~~~
+C:/Program Files/GIT/eclipse/mingw/mingw64/include/c++/13.2.0/iomanip:313:5: note: candidate: 'template<class _CharT, class _Traits, class _MoneyT> std::basic_ostream<_CharT, _Traits>& std::operator<<(basic_ostream<_CharT, _Traits>&, _Put_money<_MoneyT>)'
+  313 |     operator<<(basic_ostream<_CharT, _Traits>& __os, _Put_money<_MoneyT> __f)
+      |     ^~~~~~~~
+C:/Program Files/GIT/eclipse/mingw/mingw64/include/c++/13.2.0/iomanip:313:5: note:   template argument deduction/substitution failed:
+..\myCode\MeasurementDb.cpp:105:18: note:   'std::pair<const std::__cxx11::basic_string<char>, std::vector<std::shared_ptr<Measurement> > >' is not derived from 'std::_Put_money<_MoneyT>'
+  105 |         cout << *itr << endl;
+      |                  ^~~
+C:/Program Files/GIT/eclipse/mingw/mingw64/include/c++/13.2.0/iomanip:365:5: note: candidate: 'template<class _CharT, class _Traits> std::basic_ostream<_CharT, _Traits>& std::operator<<(basic_ostream<_CharT, _Traits>&, _Put_time<_CharT>)'
+  365 |     operator<<(basic_ostream<_CharT, _Traits>& __os, _Put_time<_CharT> __f)
+      |     ^~~~~~~~
+C:/Program Files/GIT/eclipse/mingw/mingw64/include/c++/13.2.0/iomanip:365:5: note:   template argument deduction/substitution failed:
+..\myCode\MeasurementDb.cpp:105:18: note:   'std::pair<const std::__cxx11::basic_string<char>, std::vector<std::shared_ptr<Measurement> > >' is not derived from 'std::_Put_time<_CharT>'
+  105 |         cout << *itr << endl;
+      |                  ^~~
+In file included from C:/Program Files/GIT/eclipse/mingw/mingw64/include/c++/13.2.0/memory:80,
+                 from ..\myCode\Measurement.h:16:
+C:/Program Files/GIT/eclipse/mingw/mingw64/include/c++/13.2.0/bits/shared_ptr.h:70:5: note: candidate: 'template<class _Ch, class _Tr, class _Tp, __gnu_cxx::_Lock_policy _Lp> std::basic_ostream<_CharT, _Traits>& std::operator<<(basic_ostream<_CharT, _Traits>&, const __shared_ptr<_Tp, _Lp>&)'
+   70 |     operator<<(std::basic_ostream<_Ch, _Tr>& __os,
+      |     ^~~~~~~~
+C:/Program Files/GIT/eclipse/mingw/mingw64/include/c++/13.2.0/bits/shared_ptr.h:70:5: note:   template argument deduction/substitution failed:
+..\myCode\MeasurementDb.cpp:105:18: note:   'std::pair<const std::__cxx11::basic_string<char>, std::vector<std::shared_ptr<Measurement> > >' is not derived from 'const std::__shared_ptr<_Tp, _Lp>'
+  105 |         cout << *itr << endl;
+      |                  ^~~
+09:15:52 **** Incremental Build of configuration Debug for project MeasurementDb ****
+Info: Internal Builder is used for build
+g++ -std=c++1y -O0 -g3 -Wall -c -fmessage-length=0 -Wall -Werror=return-type -o "myCode\\MeasurementDb.o" "..\\myCode\\MeasurementDb.cpp" 
+..\myCode\MeasurementDb.cpp: In member function 'bool MeasurementDb::maximumTemperature(std::string&, std::shared_ptr<Measurement>&)':
+..\myCode\MeasurementDb.cpp:105:17: error: no match for 'operator*' (operand type is 'const std::__cxx11::basic_string<char>')
+  105 |         cout << *itr->first << endl;
+      |                 ^~~~~~~~~~~
+09:16:00 **** Incremental Build of configuration Debug for project MeasurementDb ****
+Info: Internal Builder is used for build
+g++ -std=c++1y -O0 -g3 -Wall -c -fmessage-length=0 -Wall -Werror=return-type -o "myCode\\MeasurementDb.o" "..\\myCode\\MeasurementDb.cpp" 
+g++ -o MeasurementDb.exe "myCode\\Humidity.o" "myCode\\Measurement.o" "myCode\\MeasurementDb.o" "myCode\\Temperature.o" "myCode\\main.o" 
+Info: Nothing to build for MeasurementDb
+09:16:52 **** Incremental Build of configuration Debug for project MeasurementDb ****
+Info: Internal Builder is used for build
+g++ -std=c++1y -O0 -g3 -Wall -c -fmessage-length=0 -Wall -Werror=return-type -o "myCode\\MeasurementDb.o" "..\\myCode\\MeasurementDb.cpp" 
+g++ -o MeasurementDb.exe "myCode\\Humidity.o" "myCode\\Measurement.o" "myCode\\MeasurementDb.o" "myCode\\Temperature.o" "myCode\\main.o" 
+Info: Nothing to build for MeasurementDb
+09:20:23 **** Incremental Build of configuration Debug for project MeasurementDb ****
+Info: Internal Builder is used for build
+g++ -std=c++1y -O0 -g3 -Wall -c -fmessage-length=0 -Wall -Werror=return-type -o "myCode\\MeasurementDb.o" "..\\myCode\\MeasurementDb.cpp" 
+g++ -o MeasurementDb.exe "myCode\\Humidity.o" "myCode\\Measurement.o" "myCode\\MeasurementDb.o" "myCode\\Temperature.o" "myCode\\main.o" 
+Info: Nothing to build for MeasurementDb
+09:20:51 **** Incremental Build of configuration Debug for project MeasurementDb ****
+Info: Internal Builder is used for build
+g++ -std=c++1y -O0 -g3 -Wall -c -fmessage-length=0 -Wall -Werror=return-type -o "myCode\\MeasurementDb.o" "..\\myCode\\MeasurementDb.cpp" 
+g++ -std=c++1y -O0 -g3 -Wall -c -fmessage-length=0 -Wall -Werror=return-type -o "myCode\\main.o" "..\\myCode\\main.cpp" 
+g++ -o MeasurementDb.exe "myCode\\Humidity.o" "myCode\\Measurement.o" "myCode\\MeasurementDb.o" "myCode\\Temperature.o" "myCode\\main.o" 
+09:21:17 **** Incremental Build of configuration Debug for project MeasurementDb ****
+Info: Internal Builder is used for build
+g++ -std=c++1y -O0 -g3 -Wall -c -fmessage-length=0 -Wall -Werror=return-type -o "myCode\\main.o" "..\\myCode\\main.cpp" 
+g++ -o MeasurementDb.exe "myCode\\Humidity.o" "myCode\\Measurement.o" "myCode\\MeasurementDb.o" "myCode\\Temperature.o" "myCode\\main.o" 
+09:40:36 **** Incremental Build of configuration Debug for project MeasurementDb ****
+Info: Internal Builder is used for build
+g++ -std=c++1y -O0 -g3 -Wall -c -fmessage-length=0 -Wall -Werror=return-type -o "myCode\\Temperature.o" "..\\myCode\\Temperature.cpp" 
+g++ -std=c++1y -O0 -g3 -Wall -c -fmessage-length=0 -Wall -Werror=return-type -o "myCode\\MeasurementDb.o" "..\\myCode\\MeasurementDb.cpp" 
+g++ -std=c++1y -O0 -g3 -Wall -c -fmessage-length=0 -Wall -Werror=return-type -o "myCode\\main.o" "..\\myCode\\main.cpp" 
+g++ -std=c++1y -O0 -g3 -Wall -c -fmessage-length=0 -Wall -Werror=return-type -o "myCode\\Humidity.o" "..\\myCode\\Humidity.cpp" 
+g++ -o MeasurementDb.exe "myCode\\Humidity.o" "myCode\\Measurement.o" "myCode\\MeasurementDb.o" "myCode\\Temperature.o" "myCode\\main.o" 

@@ -1,0 +1,22 @@
+/*
+ * Measurement.h
+ *
+ *  Created on: 01-Feb-2024
+ *      Author: giris
+ */
+
+#ifndef MEASUREMENT_H_
+#define MEASUREMENT_H_
+
+//#include <cstdint>
+
+class Measurement
+{
+private:
+	uint16_t timestamp;
+public:
+	Measurement();
+	virtual ~Measurement();
+};
+
+#endif /* MEASUREMENT_H_ */

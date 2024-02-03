@@ -1,0 +1,28 @@
+/*
+ * Temperature.h
+ *
+ *  Created on: 01-Feb-2024
+ *      Author: giris
+ */
+
+#ifndef TEMPERATURE_H_
+#define TEMPERATURE_H_
+
+#include "Measurement.h"
+
+class Temperature : public Measurement
+{
+private:
+	float temperature;
+public:
+	Temperature(uint16_t teimstamp, float temperature);
+	virtual ~Temperature();
+
+	float getTemperature() const;
+
+	std::string toString() const override;
+	static std::shared_ptr<Temperature> fromString(uint16_t timestamp);
+	Temperature* toType(Measurement* ptr);
+};
+
+#endif /* TEMPERATURE_H_ */
