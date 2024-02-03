@@ -1,0 +1,31 @@
+/*
+ * Temperature.cpp
+ *
+ *  Created on: 01-Feb-2024
+ *      Author: giris
+ */
+
+#include "Temperature.h"
+
+Temperature::Temperature()
+{
+	// TODO Auto-generated constructor stub
+
+}
+
+Temperature::Temperature(uint16_t teimstamp, float temperature)
+{
+}
+
+Temperature::~Temperature()
+{
+	// TODO Auto-generated destructor stub
+}
+
+float Temperature::getTemperature() const
+{
+}
+
+std::string Temperature::toString() const
+{
+}

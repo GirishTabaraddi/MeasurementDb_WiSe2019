@@ -1,0 +1,18 @@
+/*
+ * Measurement.h
+ *
+ *  Created on: 01-Feb-2024
+ *      Author: giris
+ */
+
+#ifndef MEASUREMENT_H_
+#define MEASUREMENT_H_
+
+class Measurement
+{
+public:
+	Measurement();
+	virtual ~Measurement();
+};
+
+#endif /* MEASUREMENT_H_ */

@@ -1,0 +1,41 @@
+// Standard (system) header files
+#include <iostream>
+#include <cstdlib>
+
+using namespace std;
+
+// Add your project's header files here
+#include "Temperature.h"
+#include "Humidity.h"
+#include "MeasurementDb.h"
+
+// Main program
+int main ()
+{
+	cout << "MeasurementDb started." << endl << endl;
+
+	Temperature measurement1(6, -3);
+
+	cout << measurement1.toString();
+
+	uint16_t time = Measurement::toTimestamp(6, 0);
+
+	cout << Measurement::toTimeOfDay(time) << " " << measurement1.toString() << endl;
+
+	cout << measurement1 <<endl;
+
+	MeasurementDb db;
+
+	shared_ptr<Humidity> measure1 = make_shared<Humidity>(8, 80);
+	shared_ptr<Temperature> measure2 = make_shared<Temperature>(10, 20);
+	shared_ptr<Temperature> measure3 = make_shared<Temperature>(12, 22);
+
+
+	db.addMeasurement("Bath", measure1);
+	db.addMeasurement("Kitchen", measure2);
+	db.addMeasurement("Kitchen", measure3);
+
+	db.print();
+
+	return 0;
+}

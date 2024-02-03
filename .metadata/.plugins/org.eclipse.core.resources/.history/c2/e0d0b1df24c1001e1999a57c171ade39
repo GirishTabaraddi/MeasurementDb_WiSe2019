@@ -1,0 +1,27 @@
+/*
+ * Measurement.cpp
+ *
+ *  Created on: 01-Feb-2024
+ *      Author: giris
+ */
+
+#include "Measurement.h"
+
+Measurement::Measurement()
+{
+	// TODO Auto-generated constructor stub
+
+}
+
+Measurement::Measurement(uint16_t timestamp)
+{
+}
+
+Measurement::~Measurement()
+{
+	// TODO Auto-generated destructor stub
+}
+
+uint16_t Measurement::toTimestamp(int hour, int minute)
+{
+}

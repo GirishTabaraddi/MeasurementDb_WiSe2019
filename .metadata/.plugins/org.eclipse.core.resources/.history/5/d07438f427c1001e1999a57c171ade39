@@ -1,0 +1,26 @@
+/*
+ * Temperature.h
+ *
+ *  Created on: 01-Feb-2024
+ *      Author: giris
+ */
+
+#ifndef TEMPERATURE_H_
+#define TEMPERATURE_H_
+
+#include <cstdint>
+#include <string>
+#include <iostream>
+#include <sstream>
+#include <iomanip>
+
+class Temperature
+{
+private:
+	float temperature;
+public:
+	Temperature();
+	virtual ~Temperature();
+};
+
+#endif /* TEMPERATURE_H_ */

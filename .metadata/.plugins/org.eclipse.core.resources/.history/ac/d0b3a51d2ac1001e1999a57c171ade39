@@ -1,0 +1,24 @@
+// Standard (system) header files
+#include <iostream>
+#include <cstdlib>
+
+using namespace std;
+
+// Add your project's header files here
+#include "Temperature.h"
+
+// Main program
+int main ()
+{
+	cout << "MeasurementDb started." << endl << endl;
+
+	Temperature measurement1(6, -3);
+
+	cout << measurement1.toString() << endl;
+
+	uint16_t time = Measurement::toTimestamp(6, 0);
+
+	cout << Measurement::toTimeOfDay(time) << measurement1.toString() << endl;
+
+	return 0;
+}

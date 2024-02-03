@@ -1,0 +1,18 @@
+/*
+ * MeasurementDb.h
+ *
+ *  Created on: 01-Feb-2024
+ *      Author: giris
+ */
+
+#ifndef MEASUREMENTDB_H_
+#define MEASUREMENTDB_H_
+
+class MeasurementDb
+{
+public:
+	MeasurementDb();
+	virtual ~MeasurementDb();
+};
+
+#endif /* MEASUREMENTDB_H_ */

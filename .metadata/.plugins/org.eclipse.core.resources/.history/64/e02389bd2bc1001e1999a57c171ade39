@@ -1,0 +1,20 @@
+/*
+ * Humidity.h
+ *
+ *  Created on: 01-Feb-2024
+ *      Author: giris
+ */
+
+#ifndef HUMIDITY_H_
+#define HUMIDITY_H_
+
+#include "Measurement.h"
+
+class Humidity: public Measurement
+{
+public:
+	Humidity();
+	virtual ~Humidity();
+};
+
+#endif /* HUMIDITY_H_ */

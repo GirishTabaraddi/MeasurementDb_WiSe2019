@@ -1,0 +1,10 @@
+09:40:36 **** Incremental Build of configuration Debug for project MeasurementDb ****
+Info: Internal Builder is used for build
+g++ -std=c++1y -O0 -g3 -Wall -c -fmessage-length=0 -Wall -Werror=return-type -o "myCode\\Temperature.o" "..\\myCode\\Temperature.cpp" 
+g++ -std=c++1y -O0 -g3 -Wall -c -fmessage-length=0 -Wall -Werror=return-type -o "myCode\\MeasurementDb.o" "..\\myCode\\MeasurementDb.cpp" 
+g++ -std=c++1y -O0 -g3 -Wall -c -fmessage-length=0 -Wall -Werror=return-type -o "myCode\\main.o" "..\\myCode\\main.cpp" 
+g++ -std=c++1y -O0 -g3 -Wall -c -fmessage-length=0 -Wall -Werror=return-type -o "myCode\\Humidity.o" "..\\myCode\\Humidity.cpp" 
+g++ -o MeasurementDb.exe "myCode\\Humidity.o" "myCode\\Measurement.o" "myCode\\MeasurementDb.o" "myCode\\Temperature.o" "myCode\\main.o" 
+
+09:40:40 Build Finished. 0 errors, 0 warnings. (took 4s.378ms)
+

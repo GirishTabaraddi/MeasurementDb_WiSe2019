@@ -1,0 +1,5 @@
+[Bath]
+480;Humidity: 80%
+[Kitchen]
+600;Temperature: 20°C
+720;Temperature: 22°C
