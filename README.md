@@ -2,7 +2,7 @@
 
 Topic of this exam is the handling of measurement values from some sensor such as a temperature or humidity sensor. Here’s a complete class diagram (std prefix omitted for readability)
 
-![MeasurementDb_UML]()
+![MeasurementDb_UML](https://github.com/GirishTabaraddi/MeasurementDb_WiSe2019/blob/fetaure/add-repo/MeasurementDb_UML.png)
 
 Reminder: pure virtual (abstract) methods are shown in italics, class methods (static) are underlined. The recommended way to solve the exercises is to only declare and implement the methods as required (as opposed to immediately declaring all methods in the class definition). This is less error prone. Declarations without definitions yield no points.
 
